@@ -1,28 +1,28 @@
 object Form1: TForm1
-  Left = 718
-  Height = 1106
-  Top = 208
-  Width = 1840
+  Left = 323
+  Height = 653
+  Top = 179
+  Width = 1150
   Caption = 'Form1'
-  ClientHeight = 1106
-  ClientWidth = 1840
-  DesignTimePPI = 192
+  ClientHeight = 0
+  ClientWidth = 0
+  DesignTimePPI = 120
   LCLVersion = '2.0.6.0'
   object GewaehltLabel1: TLabel
-    Left = 360
-    Height = 32
-    Top = 432
-    Width = 86
+    Left = 225
+    Height = 20
+    Top = 270
+    Width = 54
     Caption = 'Gewählt'
     ParentColor = False
     ParentFont = False
     Visible = False
   end
   object MatheSpickerButton1: TButton
-    Left = 256
-    Height = 270
-    Top = 166
-    Width = 304
+    Left = 160
+    Height = 169
+    Top = 104
+    Width = 190
     Caption = 'Mathe-Spicker'
     Color = clSilver
     OnClick = MatheSpickerButton1Click
@@ -30,10 +30,10 @@ object Form1: TForm1
     TabOrder = 0
   end
   object WISPickerButton2: TButton
-    Left = 794
-    Height = 270
-    Top = 166
-    Width = 304
+    Left = 496
+    Height = 169
+    Top = 104
+    Width = 190
     Caption = 'WI-Spicker'
     Color = clSilver
     OnClick = WISPickerButton2Click
@@ -41,10 +41,10 @@ object Form1: TForm1
     TabOrder = 1
   end
   object GWASpickerButton3: TButton
-    Left = 1267
-    Height = 270
-    Top = 166
-    Width = 304
+    Left = 792
+    Height = 169
+    Top = 104
+    Width = 190
     Caption = 'GWA-Spicker'
     Color = clSilver
     OnClick = GWASpickerButton3Click
@@ -52,10 +52,10 @@ object Form1: TForm1
     TabOrder = 2
   end
   object BWLSpickerButton4: TButton
-    Left = 256
-    Height = 270
-    Top = 640
-    Width = 304
+    Left = 160
+    Height = 169
+    Top = 400
+    Width = 190
     Caption = 'BWL-Spicker'
     Color = clSilver
     OnClick = BWLSpickerButton4Click
@@ -63,10 +63,10 @@ object Form1: TForm1
     TabOrder = 3
   end
   object ProgrammierSpickerButton5: TButton
-    Left = 794
-    Height = 270
-    Top = 640
-    Width = 304
+    Left = 496
+    Height = 169
+    Top = 400
+    Width = 190
     Caption = 'Programmier-Spicker'
     Color = clSilver
     OnClick = ProgrammierSpickerButton5Click
@@ -74,10 +74,10 @@ object Form1: TForm1
     TabOrder = 4
   end
   object TISpickerButton6: TButton
-    Left = 1267
-    Height = 270
-    Top = 640
-    Width = 304
+    Left = 792
+    Height = 169
+    Top = 400
+    Width = 190
     Caption = 'TI-Spicker'
     Color = clSilver
     OnClick = TISpickerButton6Click
@@ -85,20 +85,20 @@ object Form1: TForm1
     TabOrder = 5
   end
   object WeiterzurPruefungButton: TButton
-    Left = 1498
-    Height = 50
-    Top = 997
-    Width = 266
+    Left = 936
+    Height = 31
+    Top = 623
+    Width = 166
     Caption = 'Weiter zur Prüfung'
     OnClick = WeiterzurPruefungButtonClick
     ParentFont = False
     TabOrder = 6
   end
   object GewaehltLabel2: TLabel
-    Left = 909
-    Height = 32
-    Top = 432
-    Width = 86
+    Left = 568
+    Height = 20
+    Top = 270
+    Width = 54
     Caption = 'Gewählt'
     ParentColor = False
     ParentFont = False
@@ -106,40 +106,40 @@ object Form1: TForm1
     OnClick = GewaehltLabel2Click
   end
   object GewaehltLabel3: TLabel
-    Left = 1384
-    Height = 32
-    Top = 432
-    Width = 86
+    Left = 865
+    Height = 20
+    Top = 270
+    Width = 54
     Caption = 'Gewählt'
     ParentColor = False
     ParentFont = False
     Visible = False
   end
   object GewaehltLabel4: TLabel
-    Left = 360
-    Height = 32
-    Top = 912
-    Width = 86
+    Left = 225
+    Height = 20
+    Top = 570
+    Width = 54
     Caption = 'Gewählt'
     ParentColor = False
     ParentFont = False
     Visible = False
   end
   object GewaehltLabel5: TLabel
-    Left = 909
-    Height = 32
-    Top = 912
-    Width = 86
+    Left = 568
+    Height = 20
+    Top = 570
+    Width = 54
     Caption = 'Gewählt'
     ParentColor = False
     ParentFont = False
     Visible = False
   end
   object GewaehltLabel6: TLabel
-    Left = 1384
-    Height = 32
-    Top = 912
-    Width = 86
+    Left = 865
+    Height = 20
+    Top = 570
+    Width = 54
     Caption = 'Gewählt'
     ParentColor = False
     ParentFont = False

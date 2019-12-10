@@ -163,7 +163,7 @@ begin
   WISpickerButton2.enabled:=false;
   SpickerCounter:= SpickerCounter + 1;
   GewaehltLabel2.Visible:=true;
-  Form2.IDArray[2] := 2;
+  IDArray[2] := 2;
   if
   SpickerCounter= 3
   then

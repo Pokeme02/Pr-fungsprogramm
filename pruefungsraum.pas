@@ -59,6 +59,25 @@ type
       OtherAttacks: array[1..4] of array[1..5] of Integer;
       Lifepoints: Integer;
       Typ: String;
+
+  end;
+    type Profs = class
+    private
+      Name: String;
+      ID: Integer;
+      OwnAttacks: array[1..4] of Integer;
+      Lifepoints: Integer;
+      Typ: String;
+
+  end;
+      type ProfAttacken= class
+    private
+      Name: String;
+      ID: Integer;
+
+      Damage: Integer;
+      Typ: String;
+
   end;
 
   //type Attack = class
@@ -79,6 +98,7 @@ var
   GWASpicker: Spicker;
 
 implementation
+
 
 
 {$R *.lfm}

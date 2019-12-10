@@ -1,19 +1,19 @@
 object Form2: TForm2
-  Left = 570
-  Height = 1612
-  Top = 254
-  Width = 2392
+  Left = 621
+  Height = 653
+  Top = 139
+  Width = 1196
   Caption = 'Form2'
-  ClientHeight = 1612
-  ClientWidth = 2392
-  DesignTimePPI = 192
+  ClientHeight = 0
+  ClientWidth = 0
+  DesignTimePPI = 120
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
   object Image1: TImage
     Left = 0
-    Height = 1339
+    Height = 837
     Top = 0
-    Width = 2388
+    Width = 1492
     Picture.Data = {
       0A544A706567496D6167658E290300FFD8FFE000104A46494600010100004800
       480000FFE102D44578696600004D4D002A000000080008010F00020000001800
@@ -6496,84 +6496,87 @@ object Form2: TForm2
     Stretch = True
   end
   object PageControl1: TPageControl
-    Left = 2
-    Height = 272
-    Top = 1340
-    Width = 2390
+    Left = 1
+    Height = 170
+    Top = 838
+    Width = 1494
     ActivePage = SpickerTab1
+    ParentFont = False
     TabIndex = 0
     TabOrder = 0
     OnChange = PageControl1Change
     object SpickerTab1: TTabSheet
       Caption = 'SpickerTab1'
-      ClientHeight = 214
-      ClientWidth = 2374
+      ClientHeight = 137
+      ClientWidth = 1486
+      ParentFont = False
       object RadioAttack1: TRadioGroup
-        Left = 91
-        Height = 208
+        Left = 57
+        Height = 130
         Top = 0
-        Width = 1623
+        Width = 1014
         AutoFill = False
         ChildSizing.LeftRightSpacing = 6
         ChildSizing.ShrinkHorizontal = crsScaleChilds
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 171
-        ClientWidth = 1619
+        ClientHeight = 105
+        ClientWidth = 1010
+        ParentFont = False
         TabOrder = 0
         object CheckAttack1: TRadioButton
           Left = 1184
-          Height = 69
+          Height = 45
           Top = 56
-          Width = 323
+          Width = 204
           Align = alCustom
           Caption = 'CheckAttack1'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 0
         end
         object CheckAttack2: TRadioButton
           Left = 32
-          Height = 69
+          Height = 45
           Top = 56
-          Width = 323
+          Width = 204
           Align = alCustom
           Caption = 'CheckAttack2'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 1
         end
         object CheckAttack3: TRadioButton
           Left = 408
-          Height = 69
+          Height = 45
           Top = 56
-          Width = 323
+          Width = 204
           Align = alCustom
           Caption = 'CheckAttack3'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 2
         end
         object CheckAttack4: TRadioButton
           Left = 792
-          Height = 69
+          Height = 45
           Top = 56
-          Width = 323
+          Width = 204
           Align = alCustom
           Caption = 'CheckAttack4'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 3
         end
       end
       object Button1: TButton
-        Left = 1736
-        Height = 194
-        Top = 16
-        Width = 640
+        Left = 1085
+        Height = 121
+        Top = 10
+        Width = 400
         Caption = 'ANGRIFF!'
-        Font.Height = 100
+        Font.Height = 63
         ParentFont = False
         TabOrder = 1
       end
@@ -6582,19 +6585,21 @@ object Form2: TForm2
       Caption = 'SpickerTab2'
       ClientHeight = 214
       ClientWidth = 2374
+      ParentFont = False
       object RadioAttack2: TRadioGroup
-        Left = 91
-        Height = 208
+        Left = 57
+        Height = 130
         Top = 0
-        Width = 1623
+        Width = 1014
         AutoFill = False
         ChildSizing.LeftRightSpacing = 6
         ChildSizing.ShrinkHorizontal = crsScaleChilds
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 171
-        ClientWidth = 1619
+        ClientHeight = 105
+        ClientWidth = 1010
+        ParentFont = False
         TabOrder = 0
         object CheckAttack5: TRadioButton
           Left = 1184
@@ -6603,7 +6608,7 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack1'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 0
         end
@@ -6614,7 +6619,7 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack2'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 1
         end
@@ -6625,7 +6630,7 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack3'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 2
         end
@@ -6636,18 +6641,18 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack4'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 3
         end
       end
       object Button2: TButton
-        Left = 1736
-        Height = 194
-        Top = 16
-        Width = 640
+        Left = 1085
+        Height = 121
+        Top = 10
+        Width = 400
         Caption = 'ANGRIFF!'
-        Font.Height = 100
+        Font.Height = 63
         ParentFont = False
         TabOrder = 1
       end
@@ -6656,19 +6661,21 @@ object Form2: TForm2
       Caption = 'SpickerTab3'
       ClientHeight = 214
       ClientWidth = 2374
+      ParentFont = False
       object RadioAttack3: TRadioGroup
-        Left = 91
-        Height = 208
+        Left = 57
+        Height = 130
         Top = 0
-        Width = 1623
+        Width = 1014
         AutoFill = False
         ChildSizing.LeftRightSpacing = 6
         ChildSizing.ShrinkHorizontal = crsScaleChilds
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 171
-        ClientWidth = 1619
+        ClientHeight = 105
+        ClientWidth = 1010
+        ParentFont = False
         TabOrder = 0
         object CheckAttack9: TRadioButton
           Left = 1184
@@ -6677,7 +6684,7 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack1'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 0
         end
@@ -6688,7 +6695,7 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack2'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 1
         end
@@ -6699,7 +6706,7 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack3'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 2
         end
@@ -6710,18 +6717,18 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack4'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 3
         end
       end
       object Button3: TButton
-        Left = 1736
-        Height = 194
-        Top = 16
-        Width = 640
+        Left = 1085
+        Height = 121
+        Top = 10
+        Width = 400
         Caption = 'ANGRIFF!'
-        Font.Height = 100
+        Font.Height = 63
         ParentFont = False
         TabOrder = 1
       end
@@ -6730,19 +6737,21 @@ object Form2: TForm2
       Caption = 'SpecialSpickerTab'
       ClientHeight = 214
       ClientWidth = 2374
+      ParentFont = False
       object RadioAttack4: TRadioGroup
-        Left = 91
-        Height = 208
+        Left = 57
+        Height = 130
         Top = 0
-        Width = 1623
+        Width = 1014
         AutoFill = False
         ChildSizing.LeftRightSpacing = 6
         ChildSizing.ShrinkHorizontal = crsScaleChilds
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 171
-        ClientWidth = 1619
+        ClientHeight = 105
+        ClientWidth = 1010
+        ParentFont = False
         TabOrder = 0
         object CheckAttack13: TRadioButton
           Left = 1184
@@ -6751,7 +6760,7 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack1'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 0
         end
@@ -6762,7 +6771,7 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack2'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 1
         end
@@ -6773,7 +6782,7 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack3'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 2
         end
@@ -6784,18 +6793,18 @@ object Form2: TForm2
           Width = 323
           Align = alCustom
           Caption = 'CheckAttack4'
-          Font.Height = 65
+          Font.Height = 41
           ParentFont = False
           TabOrder = 3
         end
       end
       object Button4: TButton
-        Left = 1736
-        Height = 194
-        Top = 16
-        Width = 640
+        Left = 1085
+        Height = 121
+        Top = 10
+        Width = 400
         Caption = 'ANGRIFF!'
-        Font.Height = 100
+        Font.Height = 63
         ParentFont = False
         TabOrder = 1
       end
