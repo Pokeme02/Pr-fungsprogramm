@@ -59,8 +59,6 @@ type
       OtherAttacks: array[1..4] of array[1..5] of Integer;
       Lifepoints: Integer;
       Typ: String;
-    public
-      constructor Create();
   end;
 
   //type Attack = class
@@ -82,7 +80,7 @@ var
 
 implementation
 
-constructor MatheSpicker.Create();
+MatheSpicker.Create();
 begin
   //Mathe   TODO: Attacks
   Mathespicker.Name:= 'Mathespicker';
