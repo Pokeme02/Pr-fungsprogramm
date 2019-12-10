@@ -82,15 +82,6 @@ var
 
 implementation
 
-constructor MatheSpicker.Create();
-begin
-  //Mathe   TODO: Attacks
-  Mathespicker.Name:= 'Mathespicker';
-  Mathespicker.ID:= 1;
-  Mathespicker.Lifepoints:= 100;
-  Mathespicker.Typ:= 'Mathe';
-end;
-
 {$R *.lfm}
 
 { TForm2 }
