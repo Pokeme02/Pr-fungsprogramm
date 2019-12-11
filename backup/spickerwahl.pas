@@ -26,7 +26,6 @@ type
     ProgrammierSpickerButton5: TButton;
     TISpickerButton6: TButton;
     procedure BWLSpickerButton4Click(Sender: TObject);
-    procedure GewaehltLabel2Click(Sender: TObject);
     procedure GWASpickerButton3Click(Sender: TObject);
     procedure MatheSpickerButton1Click(Sender: TObject);
     procedure ProgrammierSpickerButton5Click(Sender: TObject);
@@ -54,6 +53,10 @@ implementation
  procedure TForm1.FormCreate(sender:TObject);
  begin
  SpickerCounter:=0;
+
+ IDArray[1] := 0;
+ IDArray[2] := 0;
+ IDArray[3] := 0;
  end;
 
 procedure TForm1.MatheSpickerButton1Click(Sender: TObject);
@@ -61,7 +64,18 @@ begin
   MathespickerButton1.enabled:=false;
   SpickerCounter:= SpickerCounter + 1;
   GewaehltLabel1.Visible:=true;
-  IDArray[1] := 1;
+  if IDArray[1] = 0 then
+  Begin
+     IDArray[1] := 1;
+  end
+  else if IDArray[2] = 0 then
+  begin
+     IDArray[2] := 1;
+  end
+  else if IDArray[3] = 0 then
+  begin
+     IDArray[3] := 1;
+  end;
    if
    SpickerCounter= 3
    then
@@ -79,7 +93,18 @@ begin
    ProgrammierSpickerButton5.enabled:=false;
    SpickerCounter:= SpickerCounter + 1;
    GewaehltLabel5.Visible:=true;
-   IDArray[5] := 5;
+   if IDArray[1] = 0 then
+  Begin
+     IDArray[1] := 5;
+  end
+  else if IDArray[2] = 0 then
+  begin
+     IDArray[2] := 5;
+  end
+  else if IDArray[3] = 0 then
+  begin
+     IDArray[3] := 5;
+  end;
    if
    SpickerCounter= 3
    then
@@ -97,7 +122,18 @@ begin
   TISpickerButton6.enabled:=false;
   SpickerCounter:= SpickerCounter + 1;
   GewaehltLabel6.Visible:=true;
-  IDArray[6] := 6;
+  if IDArray[1] = 0 then
+  Begin
+     IDArray[1] := 6;
+  end
+  else if IDArray[2] = 0 then
+  begin
+     IDArray[2] := 6;
+  end
+  else if IDArray[3] = 0 then
+  begin
+     IDArray[3] := 6;
+  end;
   if
   SpickerCounter= 3
   then
@@ -121,7 +157,18 @@ begin
   GWASpickerButton3.enabled:=false;
   SpickerCounter:= SpickerCounter + 1;
   GewaehltLabel3.Visible:=true;
-  IDArray[3] := 3;
+  if IDArray[1] = 0 then
+  Begin
+     IDArray[1] := 3;
+  end
+  else if IDArray[2] = 0 then
+  begin
+     IDArray[2] := 3;
+  end
+  else if IDArray[3] = 0 then
+  begin
+     IDArray[3] := 3;
+  end;
   if
   SpickerCounter= 3
   then
@@ -150,12 +197,6 @@ begin
        ProgrammierSpickerButton5.Enabled:=false;
        TISpickerButton6.Enabled:=false;
     end;
-
-end;
-
-procedure TForm1.GewaehltLabel2Click(Sender: TObject);
-begin
-
 end;
 
 procedure TForm1.WISPickerButton2Click(Sender: TObject);
