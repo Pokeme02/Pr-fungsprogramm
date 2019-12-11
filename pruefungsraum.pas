@@ -13,7 +13,7 @@ type
   { TForm2 }
 
   TForm2 = class(TForm)
-    Button1: TButton;
+    AngriffButton1: TButton;
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
@@ -30,6 +30,8 @@ type
     CheckAttack8: TRadioButton;
     CheckAttack9: TRadioButton;
     Image1: TImage;
+    GegnernameLabel1: TLabel;
+    LifepointsProfLabel2: TLabel;
     PageControl1: TPageControl;
     RadioAttack1: TRadioGroup;
     CheckAttack1: TRadioButton;
@@ -44,7 +46,11 @@ type
     SpickerTab2: TTabSheet;
     SpickerTab3: TTabSheet;
     SpecialSpickerTab: TTabSheet;
+<<<<<<< HEAD
     procedure Button1Click(Sender: TObject);
+=======
+    procedure AngriffButton1Click(Sender: TObject);
+>>>>>>> HPAnzeige
     procedure FormCreate(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
     procedure SwitchSpicker1Change(Sender: TObject);
@@ -99,6 +105,8 @@ var
   MatheSpicker: Spicker;
   WISpicker: Spicker;
   GWASpicker: Spicker;
+  LifepointsProf:Integer;
+
 
 implementation
 
@@ -120,6 +128,7 @@ procedure TForm2.SwitchSpicker1Change(Sender: TObject);
 begin
 
 end;
+<<<<<<< HEAD
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
@@ -200,12 +209,100 @@ begin
 end;
 
 procedure TForm2.Button1Click(Sender: TObject);
+=======
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+  if IDArray[1] = 1 then
+    begin
+        SpickerTab1.Caption := 'Mathe';
+    end
+  else if IDArray[1] = 2 then
+    begin
+        SpickerTab1.Caption := 'WI';
+    end
+  else if IDArray[1] = 3 then
+    begin
+        SpickerTab1.Caption := 'GWA';
+    end
+  else if IDArray[1] = 4 then
+    begin
+        SpickerTab1.Caption := 'BWL';
+    end
+  else if IDArray[1] = 5 then
+    begin
+        SpickerTab1.Caption := 'Programmieren';
+    end
+  else if IDArray[1] = 6 then
+    begin
+        SpickerTab1.Caption := 'TI';
+    end;
+
+  if IDArray[2] = 1 then
+    begin
+        SpickerTab2.Caption := 'Mathe';
+    end
+  else if IDArray[2] = 2 then
+    begin
+        SpickerTab2.Caption := 'WI';
+    end
+  else if IDArray[2] = 3 then
+    begin
+        SpickerTab2.Caption := 'GWA';
+    end
+  else if IDArray[2] = 4 then
+    begin
+        SpickerTab2.Caption := 'BWL';
+    end
+  else if IDArray[2] = 5 then
+    begin
+        SpickerTab2.Caption := 'Programmieren';
+    end
+  else if IDArray[2] = 6 then
+    begin
+        SpickerTab2.Caption := 'TI';
+    end;
+
+  if IDArray[3] = 1 then
+    begin
+        SpickerTab3.Caption := 'Mathe';
+    end
+  else if IDArray[3] = 2 then
+    begin
+        SpickerTab3.Caption := 'WI';
+    end
+  else if IDArray[3] = 3 then
+    begin
+        SpickerTab3.Caption := 'GWA';
+    end
+  else if IDArray[3] = 4 then
+    begin
+        SpickerTab3.Caption := 'BWL';
+    end
+  else if IDArray[3] = 5 then
+    begin
+        SpickerTab3.Caption := 'Programmieren';
+    end
+  else if IDArray[3] = 6 then
+    begin
+        SpickerTab3.Caption := 'TI';
+    end;
+end;
+
+procedure TForm2.AngriffButton1Click(Sender: TObject);
+>>>>>>> HPAnzeige
 begin
   if SwitchSpicker1.Checked = True then
   begin
     SpickerTab2.Enabled:= True;
     SpickerTab3.Enabled:= True;
   end;
+<<<<<<< HEAD
+=======
+  begin
+    LifepointsProfLabel2.caption:=IntToString(LifepointsProf);
+  end;
+>>>>>>> HPAnzeige
 end;
 
 end.
