@@ -47,6 +47,12 @@ type
     SpickerTab3: TTabSheet;
     SpecialSpickerTab: TTabSheet;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    SwitchSpicker2: TRadioButton;
+    SwitchSpicker3: TRadioButton;
+    SwitchSpicker4: TRadioButton;
+>>>>>>> Schomacker
     procedure Button1Click(Sender: TObject);
 =======
     procedure AngriffButton1Click(Sender: TObject);
