@@ -44,6 +44,9 @@ type
     SpickerTab2: TTabSheet;
     SpickerTab3: TTabSheet;
     SpecialSpickerTab: TTabSheet;
+    SwitchSpicker2: TRadioButton;
+    SwitchSpicker3: TRadioButton;
+    SwitchSpicker4: TRadioButton;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
