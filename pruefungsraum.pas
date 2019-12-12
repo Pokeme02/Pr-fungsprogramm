@@ -53,7 +53,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure LabeledEdit1Change(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
-    procedure SwitchSpicker1Change(Sender: TObject);
   private
 
   public
@@ -137,13 +136,10 @@ begin
   end
 end;
 
-procedure TForm2.SwitchSpicker1Change(Sender: TObject);
-begin
-
-end;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
+
   if IDArray[1] = 1 then
     begin
         SpickerTab1.Caption := 'Mathe';
@@ -218,6 +214,14 @@ begin
     begin
         SpickerTab3.Caption := 'TI';
     end;
+
+
+
+  
+  LabeledEdit2.EditLabel.Caption:= 'Schomaker';
+
+  LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
+
 end;
 
 procedure TForm2.LabeledEdit1Change(Sender: TObject);

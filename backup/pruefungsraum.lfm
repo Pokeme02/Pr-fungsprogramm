@@ -3989,7 +3989,6 @@ object Form2: TForm2
           Align = alCustom
           Caption = 'Spicker Wechseln'
           Font.Height = 66
-          OnChange = SwitchSpicker1Change
           ParentFont = False
           TabOrder = 4
         end
@@ -4079,7 +4078,6 @@ object Form2: TForm2
           Align = alCustom
           Caption = 'Spicker Wechseln'
           Font.Height = 66
-          OnChange = SwitchSpicker1Change
           ParentFont = False
           TabOrder = 4
         end
@@ -4168,7 +4166,6 @@ object Form2: TForm2
           Align = alCustom
           Caption = 'Spicker Wechseln'
           Font.Height = 66
-          OnChange = SwitchSpicker1Change
           ParentFont = False
           TabOrder = 4
         end
@@ -4258,7 +4255,6 @@ object Form2: TForm2
           Align = alCustom
           Caption = 'Spicker Wechseln'
           Font.Height = 66
-          OnChange = SwitchSpicker1Change
           ParentFont = False
           TabOrder = 4
         end
