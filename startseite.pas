@@ -5,15 +5,16 @@ unit StartSeite;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Spickerwahl;
 
 type
 
-  { TForm1 }
+  { TForm3 }
 
-  TForm1 = class(TForm)
+  TForm3 = class(TForm)
     StartButton: TButton;
     Image1: TImage;
+    procedure StartButtonClick(Sender: TObject);
   private
 
   public
@@ -21,11 +22,24 @@ type
   end;
 
 var
+  Form3: TForm3;
   Form1: TForm1;
 
 implementation
 
 {$R *.lfm}
+
+
+procedure TForm3.StartButtonClick(Sender: TObject);
+begin
+   Visible := False; // Makes Form3 invisible
+  try
+    Application.CreateForm(TForm1, Form1);
+    Form1.ShowModal; // Shows the Form1
+  finally
+    Visible := True; // Makes Form3 visible again
+  end;
+end;
 
 end.
 

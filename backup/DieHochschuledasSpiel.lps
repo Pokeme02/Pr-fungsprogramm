@@ -4,12 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="4">
+    <Units Count="7">
       <Unit0>
         <Filename Value="DieHochschuledasSpiel.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <CursorPos X="41" Y="20"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -19,10 +20,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Spickerwahl"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="47"/>
-        <CursorPos X="28" Y="170"/>
-        <UsageCount Value="37"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="141"/>
+        <CursorPos X="12" Y="151"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -33,11 +34,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Pruefungsraum"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="180"/>
-        <CursorPos X="20" Y="204"/>
-        <UsageCount Value="37"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="124"/>
+        <CursorPos X="7" Y="84"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -49,127 +49,153 @@
         <UsageCount Value="11"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="1904"/>
+        <CursorPos Y="1921"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="startseite.lfm"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="12410"/>
+        <CursorPos X="31" Y="12443"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="startseite.pas"/>
+        <UnitName Value="StartSeite"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="9"/>
+        <CursorPos X="36" Y="39"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit6>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="51" Column="3" TopLine="16"/>
+        <Caret Line="58" Column="41" TopLine="40"/>
       </Position1>
       <Position2>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="56" Column="3" TopLine="21"/>
+        <Caret Line="59" Column="58" TopLine="41"/>
       </Position2>
       <Position3>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="64" Column="12" TopLine="40"/>
+        <Caret Line="69" Column="10" TopLine="43"/>
       </Position3>
       <Position4>
         <Filename Value="spickerwahl.pas"/>
-        <Caret Line="8" Column="66"/>
+        <Caret Line="64" Column="3" TopLine="46"/>
       </Position4>
       <Position5>
         <Filename Value="spickerwahl.pas"/>
-        <Caret Line="11" Column="94"/>
+        <Caret Line="142" Column="5" TopLine="111"/>
       </Position5>
       <Position6>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="9" Column="24"/>
+        <Caret Line="91" Column="30" TopLine="73"/>
       </Position6>
       <Position7>
-        <Filename Value="spickerwahl.pas"/>
-        <Caret Line="166" Column="16" TopLine="145"/>
+        <Filename Value="pruefungsraum.pas"/>
+        <Caret Line="80" Column="26" TopLine="75"/>
       </Position7>
       <Position8>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="58" Column="41" TopLine="40"/>
+        <Caret Line="86" TopLine="77"/>
       </Position8>
       <Position9>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="59" Column="58" TopLine="41"/>
+        <Caret Line="80" Column="9" TopLine="56"/>
       </Position9>
       <Position10>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="69" Column="10" TopLine="43"/>
+        <Caret Line="82" Column="9" TopLine="58"/>
       </Position10>
       <Position11>
-        <Filename Value="spickerwahl.pas"/>
-        <Caret Line="64" Column="3" TopLine="46"/>
+        <Filename Value="pruefungsraum.pas"/>
+        <Caret Line="96" Column="137" TopLine="95"/>
       </Position11>
       <Position12>
-        <Filename Value="spickerwahl.pas"/>
-        <Caret Line="142" Column="5" TopLine="111"/>
+        <Filename Value="pruefungsraum.pas"/>
+        <Caret Line="115" Column="94" TopLine="96"/>
       </Position12>
       <Position13>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="91" Column="30" TopLine="73"/>
+        <Caret Line="139" Column="16" TopLine="109"/>
       </Position13>
       <Position14>
-        <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="80" Column="26" TopLine="75"/>
+        <Filename Value="spickerwahl.pas"/>
+        <Caret Line="49" Column="15" TopLine="46"/>
       </Position14>
       <Position15>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="86" TopLine="77"/>
+        <Caret Line="121" Column="6" TopLine="103"/>
       </Position15>
       <Position16>
-        <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="80" Column="9" TopLine="56"/>
+        <Filename Value="spickerwahl.pas"/>
+        <Caret Line="80" Column="15" TopLine="52"/>
       </Position16>
       <Position17>
-        <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="82" Column="9" TopLine="58"/>
+        <Filename Value="spickerwahl.pas"/>
+        <Caret Line="79" Column="7" TopLine="62"/>
       </Position17>
       <Position18>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="96" Column="137" TopLine="95"/>
+        <Caret Line="148" Column="36" TopLine="121"/>
       </Position18>
       <Position19>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="115" Column="94" TopLine="96"/>
+        <Caret Line="129" TopLine="109"/>
       </Position19>
       <Position20>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="139" Column="16" TopLine="109"/>
+        <Caret Line="146" Column="30" TopLine="121"/>
       </Position20>
       <Position21>
-        <Filename Value="spickerwahl.pas"/>
-        <Caret Line="49" Column="15" TopLine="46"/>
+        <Filename Value="pruefungsraum.pas"/>
+        <Caret Line="201" Column="20" TopLine="166"/>
       </Position21>
       <Position22>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="121" Column="6" TopLine="103"/>
+        <Caret Line="202" Column="20" TopLine="167"/>
       </Position22>
       <Position23>
-        <Filename Value="spickerwahl.pas"/>
-        <Caret Line="80" Column="15" TopLine="52"/>
-      </Position23>
-      <Position24>
-        <Filename Value="spickerwahl.pas"/>
-        <Caret Line="79" Column="7" TopLine="62"/>
-      </Position24>
-      <Position25>
-        <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="148" Column="36" TopLine="121"/>
-      </Position25>
-      <Position26>
-        <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="129" TopLine="109"/>
-      </Position26>
-      <Position27>
-        <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="146" Column="30" TopLine="121"/>
-      </Position27>
-      <Position28>
-        <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="201" Column="20" TopLine="166"/>
-      </Position28>
-      <Position29>
-        <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="202" Column="20" TopLine="167"/>
-      </Position29>
-      <Position30>
         <Filename Value="pruefungsraum.pas"/>
         <Caret Line="203" Column="20" TopLine="168"/>
+      </Position23>
+      <Position24>
+        <Filename Value="pruefungsraum.pas"/>
+        <Caret Line="204" Column="20" TopLine="180"/>
+      </Position24>
+      <Position25>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <Caret Line="1921" TopLine="1904"/>
+      </Position25>
+      <Position26>
+        <Filename Value="startseite.lfm"/>
+        <Caret Line="6" Column="19" TopLine="12410"/>
+      </Position26>
+      <Position27>
+        <Filename Value="startseite.pas"/>
+        <Caret Line="30" Column="11" TopLine="2"/>
+      </Position27>
+      <Position28>
+        <Filename Value="startseite.pas"/>
+        <Caret Line="31" Column="34" TopLine="4"/>
+      </Position28>
+      <Position29>
+        <Filename Value="startseite.pas"/>
+        <Caret Line="39" Column="50" TopLine="9"/>
+      </Position29>
+      <Position30>
+        <Filename Value="spickerwahl.pas"/>
+        <Caret Line="153" Column="42" TopLine="133"/>
       </Position30>
     </JumpHistory>
     <RunParams>

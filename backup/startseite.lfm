@@ -1,9 +1,9 @@
-object Form1: TForm1
-  Left = 565
+object Form3: TForm3
+  Left = 484
   Height = 591
-  Top = 242
+  Top = 232
   Width = 1072
-  Caption = 'Form1'
+  Caption = 'Form3'
   ClientHeight = 591
   ClientWidth = 1072
   DesignTimePPI = 120
