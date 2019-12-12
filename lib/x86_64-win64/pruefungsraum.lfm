@@ -3912,15 +3912,16 @@ object Form2: TForm2
     Height = 272
     Top = 1376
     Width = 3075
-    ActivePage = SpickerTab1
+    ActivePage = SpickerTab3
     ParentFont = False
-    TabIndex = 0
+    TabIndex = 2
     TabOrder = 0
     OnChange = PageControl1Change
     object SpickerTab1: TTabSheet
       Caption = 'SpickerTab1'
       ClientHeight = 214
       ClientWidth = 3059
+      OnEnter = SpickerTab1Enter
       ParentFont = False
       object RadioAttack1: TRadioGroup
         Left = 96
@@ -3938,9 +3939,9 @@ object Form2: TForm2
         ParentFont = False
         TabOrder = 0
         object CheckAttack1: TRadioButton
-          Left = 1184
+          Left = 728
           Height = 70
-          Top = 56
+          Top = 80
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack1'
@@ -3951,7 +3952,7 @@ object Form2: TForm2
         object CheckAttack2: TRadioButton
           Left = 32
           Height = 70
-          Top = 56
+          Top = -8
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack2'
@@ -3960,9 +3961,9 @@ object Form2: TForm2
           TabOrder = 1
         end
         object CheckAttack3: TRadioButton
-          Left = 408
+          Left = 32
           Height = 70
-          Top = 56
+          Top = 80
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack3'
@@ -3971,9 +3972,9 @@ object Form2: TForm2
           TabOrder = 2
         end
         object CheckAttack4: TRadioButton
-          Left = 792
+          Left = 728
           Height = 70
-          Top = 56
+          Top = -8
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack4'
@@ -3982,9 +3983,9 @@ object Form2: TForm2
           TabOrder = 3
         end
         object SwitchSpicker1: TRadioButton
-          Left = 1576
+          Left = 1528
           Height = 70
-          Top = 56
+          Top = 40
           Width = 416
           Align = alCustom
           Caption = 'Spicker Wechseln'
@@ -3994,9 +3995,9 @@ object Form2: TForm2
         end
       end
       object Button1: TButton
-        Left = 2394
+        Left = 2264
         Height = 194
-        Top = 13
+        Top = 16
         Width = 640
         Caption = 'ANGRIFF!'
         Font.Height = 101
@@ -4010,6 +4011,7 @@ object Form2: TForm2
       ClientHeight = 214
       ClientWidth = 3059
       Enabled = False
+      OnEnter = SpickerTab2Enter
       ParentFont = False
       object RadioAttack2: TRadioGroup
         Left = 91
@@ -4089,6 +4091,7 @@ object Form2: TForm2
         Width = 640
         Caption = 'ANGRIFF!'
         Font.Height = 101
+        OnClick = Button2Click
         ParentFont = False
         TabOrder = 1
       end
@@ -4098,6 +4101,7 @@ object Form2: TForm2
       ClientHeight = 214
       ClientWidth = 3059
       Enabled = False
+      OnEnter = SpickerTab3Enter
       ParentFont = False
       object RadioAttack3: TRadioGroup
         Left = 91
@@ -4177,6 +4181,7 @@ object Form2: TForm2
         Width = 640
         Caption = 'ANGRIFF!'
         Font.Height = 101
+        OnClick = Button3Click
         ParentFont = False
         TabOrder = 1
       end
@@ -4297,10 +4302,10 @@ object Form2: TForm2
     Left = 1944
     Height = 108
     Top = 328
-    Width = 144
+    Width = 360
     AutoSelect = False
     EditLabel.Height = 50
-    EditLabel.Width = 144
+    EditLabel.Width = 360
     EditLabel.Caption = 'Gegner'
     EditLabel.Color = clWhite
     EditLabel.ParentColor = False
