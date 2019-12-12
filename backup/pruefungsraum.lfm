@@ -3912,9 +3912,9 @@ object Form2: TForm2
     Height = 272
     Top = 1376
     Width = 3075
-    ActivePage = SpickerTab2
+    ActivePage = SpickerTab1
     ParentFont = False
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 0
     OnChange = PageControl1Change
     object SpickerTab1: TTabSheet
@@ -3989,7 +3989,6 @@ object Form2: TForm2
           Align = alCustom
           Caption = 'Spicker Wechseln'
           Font.Height = 66
-          OnChange = SwitchSpicker1Change
           ParentFont = False
           TabOrder = 4
         end
@@ -4079,7 +4078,6 @@ object Form2: TForm2
           Align = alCustom
           Caption = 'Spicker Wechseln'
           Font.Height = 66
-          OnChange = SwitchSpicker1Change
           ParentFont = False
           TabOrder = 4
         end
@@ -4168,7 +4166,6 @@ object Form2: TForm2
           Align = alCustom
           Caption = 'Spicker Wechseln'
           Font.Height = 66
-          OnChange = SwitchSpicker1Change
           ParentFont = False
           TabOrder = 4
         end
@@ -4190,6 +4187,7 @@ object Form2: TForm2
       ClientWidth = 3059
       Enabled = False
       ParentFont = False
+      TabVisible = False
       object RadioAttack4: TRadioGroup
         Left = 91
         Height = 208
@@ -4257,7 +4255,6 @@ object Form2: TForm2
           Align = alCustom
           Caption = 'Spicker Wechseln'
           Font.Height = 66
-          OnChange = SwitchSpicker1Change
           ParentFont = False
           TabOrder = 4
         end
@@ -4273,5 +4270,48 @@ object Form2: TForm2
         TabOrder = 1
       end
     end
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 432
+    Height = 108
+    Top = 312
+    Width = 354
+    AutoSelect = False
+    EditLabel.Height = 50
+    EditLabel.Width = 354
+    EditLabel.Caption = 'Deine Lebenspunkte'
+    EditLabel.Color = clWhite
+    EditLabel.ParentColor = False
+    EditLabel.ParentFont = False
+    EditLabel.Font.Height = 50
+    EditLabel.Font.Style = [fsBold]
+    Enabled = False
+    Font.Height = 100
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    Text = '100'
+    OnChange = LabeledEdit1Change
+  end
+  object LabeledEdit2: TLabeledEdit
+    Left = 1944
+    Height = 108
+    Top = 328
+    Width = 144
+    AutoSelect = False
+    EditLabel.Height = 50
+    EditLabel.Width = 144
+    EditLabel.Caption = 'Gegner'
+    EditLabel.Color = clWhite
+    EditLabel.ParentColor = False
+    EditLabel.ParentFont = False
+    EditLabel.Font.Height = 50
+    EditLabel.Font.Style = [fsBold]
+    Enabled = False
+    Font.Height = 100
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    Text = '100'
   end
 end

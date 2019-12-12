@@ -30,6 +30,8 @@ type
     CheckAttack8: TRadioButton;
     CheckAttack9: TRadioButton;
     Image1: TImage;
+    LabeledEdit1: TLabeledEdit;
+    LabeledEdit2: TLabeledEdit;
     PageControl1: TPageControl;
     RadioAttack1: TRadioGroup;
     CheckAttack1: TRadioButton;
@@ -49,8 +51,8 @@ type
     SwitchSpicker4: TRadioButton;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure LabeledEdit1Change(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
-    procedure SwitchSpicker1Change(Sender: TObject);
   private
 
   public
@@ -116,16 +118,28 @@ implementation
 
 procedure TForm2.PageControl1Change(Sender: TObject);
 begin
-
+  if PageControl1.TabIndex = SpickerTab1.PageIndex then
+  begin
+      LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
+  end
+  else if PageControl1.TabIndex = SpickerTab2.PageIndex then
+  begin
+      LabeledEdit1.EditLabel.Caption:= SpickerTab2.Caption;
+  end
+  else if PageControl1.TabIndex = SpickerTab3.PageIndex then
+  begin
+      LabeledEdit1.EditLabel.Caption:= SpickerTab3.Caption;
+  end
+  else if PageControl1.TabIndex = SpecialSpickerTab.PageIndex then
+  begin
+      LabeledEdit1.EditLabel.Caption:= SpecialSpickerTab.Caption;
+  end
 end;
 
-procedure TForm2.SwitchSpicker1Change(Sender: TObject);
-begin
-
-end;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
+
   if IDArray[1] = 1 then
     begin
         SpickerTab1.Caption := 'Mathe';
@@ -200,6 +214,19 @@ begin
     begin
         SpickerTab3.Caption := 'TI';
     end;
+
+
+
+  
+  LabeledEdit2.EditLabel.Caption:= 'Schomaker';
+
+  LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
+
+end;
+
+procedure TForm2.LabeledEdit1Change(Sender: TObject);
+begin
+
 end;
 
 procedure TForm2.Button1Click(Sender: TObject);

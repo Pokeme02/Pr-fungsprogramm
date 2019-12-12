@@ -148,8 +148,13 @@ end;
 
 procedure TForm1.WeiterzurPruefungButtonClick(Sender: TObject);
 begin
-  Application.CreateForm(TForm2, Form2);
-  Form2.showModal;
+  Visible := False; // Makes Form1 invisible
+  try
+    Application.CreateForm(TForm2, Form2);
+    Form2.ShowModal; // Shows the Form2
+  finally
+    Visible := True; // Makes Form1 visible again
+  end;
 end;
 
 procedure TForm1.GWASpickerButton3Click(Sender: TObject);

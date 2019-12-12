@@ -148,8 +148,12 @@ end;
 
 procedure TForm1.WeiterzurPruefungButtonClick(Sender: TObject);
 begin
-  Application.CreateForm(TForm2, Form2);
-  Form2.showModal;
+  Visible := False; // Makes Form1 invisible
+  try
+    Form2.ShowModal; // Shows the Form2
+  finally
+    Visible := True; // Makes Form1 visible again
+  end;
 end;
 
 procedure TForm1.GWASpickerButton3Click(Sender: TObject);
@@ -186,7 +190,18 @@ begin
     BWLSpickerButton4.enabled:=false;
     SpickerCounter:= SpickerCounter + 1;
     GewaehltLabel4.Visible:=true;
-    IDArray[4] := 4;
+    if IDArray[1] = 0 then
+  Begin
+     IDArray[1] := 4;
+  end
+  else if IDArray[2] = 0 then
+  begin
+     IDArray[2] := 4;
+  end
+  else if IDArray[3] = 0 then
+  begin
+     IDArray[3] := 4;
+  end;
     if
     SpickerCounter= 3
     then
@@ -204,7 +219,18 @@ begin
   WISpickerButton2.enabled:=false;
   SpickerCounter:= SpickerCounter + 1;
   GewaehltLabel2.Visible:=true;
-  IDArray[2] := 2;
+  if IDArray[1] = 0 then
+  Begin
+     IDArray[1] := 2;
+  end
+  else if IDArray[2] = 0 then
+  begin
+     IDArray[2] := 2;
+  end
+  else if IDArray[3] = 0 then
+  begin
+     IDArray[3] := 2;
+  end;
   if
   SpickerCounter= 3
   then
