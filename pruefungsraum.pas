@@ -481,7 +481,329 @@ begin
     SpickerTab2.Enabled:= True;
     SpickerTab3.Enabled:= True;
   end;
+
+  if CheckAttack1.Checked = True then
+  begin
+    if CheckAttack1.Caption = 'Differentialgleichung' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = 'Binomische_Formeln' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 18;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = 'PQ-Formel' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = 'Dreisatz' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = 'Potenzgesetze' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 18;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack1.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = GWAArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = GWAArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = GWAArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = GWAArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack1.Caption = WIArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = WIArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = WIArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = WIArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack1.Caption = TIArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = TIArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 20;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = TIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = TIArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = TIArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack1.Caption = ProgrammierenArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = ProgrammierenArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 20;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = ProgrammierenArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = ProgrammierenArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = ProgrammierenArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 25;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack1.Caption = BWLArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 5;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = BWLArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = BWLArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = BWLArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = BWLArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 20;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+  end;
+
+  if CheckAttack2.Checked = True then
+  begin
+    if CheckAttack2.Caption = 'Differentialgleichung' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = 'Binomische_Formeln' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 18;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = 'PQ-Formel' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = 'Dreisatz' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = 'Potenzgesetze' then
+    begin
+       ProfLifepoints:= ProfLifepoints - 18;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack2.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = GWAArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = GWAArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = GWAArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = GWAArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack2.Caption = WIArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = WIArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = WIArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = WIArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack2.Caption = TIArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = TIArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 20;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = TIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = TIArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = TIArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack2.Caption = ProgrammierenArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = ProgrammierenArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 20;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = ProgrammierenArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 12;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = ProgrammierenArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = ProgrammierenArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 25;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+
+    if CheckAttack2.Caption = BWLArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 5;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = BWLArray[2] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = BWLArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = BWLArray[4] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = BWLArray[5] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 20;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end;
+  end;
 end;
+
+
+
+
 
 procedure TForm2.Button2Click(Sender: TObject);
 begin

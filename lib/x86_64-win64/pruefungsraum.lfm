@@ -4,8 +4,8 @@ object Form2: TForm2
   Top = 116
   Width = 2950
   Caption = 'Form2'
-  ClientHeight = 1665
-  ClientWidth = 2950
+  ClientHeight = 0
+  ClientWidth = 0
   DesignTimePPI = 192
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
@@ -3912,9 +3912,9 @@ object Form2: TForm2
     Height = 272
     Top = 1376
     Width = 3075
-    ActivePage = SpickerTab3
+    ActivePage = SpickerTab1
     ParentFont = False
-    TabIndex = 2
+    TabIndex = 0
     TabOrder = 0
     OnChange = PageControl1Change
     object SpickerTab1: TTabSheet
@@ -4029,9 +4029,9 @@ object Form2: TForm2
         ParentFont = False
         TabOrder = 0
         object CheckAttack5: TRadioButton
-          Left = 1184
+          Left = 704
           Height = 70
-          Top = 56
+          Top = 96
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack1'
@@ -4040,9 +4040,9 @@ object Form2: TForm2
           TabOrder = 0
         end
         object CheckAttack6: TRadioButton
-          Left = 32
+          Left = 40
           Height = 70
-          Top = 56
+          Top = 8
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack2'
@@ -4051,9 +4051,9 @@ object Form2: TForm2
           TabOrder = 1
         end
         object CheckAttack7: TRadioButton
-          Left = 408
+          Left = 40
           Height = 70
-          Top = 56
+          Top = 96
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack3'
@@ -4062,9 +4062,9 @@ object Form2: TForm2
           TabOrder = 2
         end
         object CheckAttack8: TRadioButton
-          Left = 792
+          Left = 704
           Height = 70
-          Top = 56
+          Top = 8
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack4'
@@ -4073,9 +4073,9 @@ object Form2: TForm2
           TabOrder = 3
         end
         object SwitchSpicker2: TRadioButton
-          Left = 1576
+          Left = 1432
           Height = 70
-          Top = 56
+          Top = 48
           Width = 416
           Align = alCustom
           Caption = 'Spicker Wechseln'
@@ -4119,9 +4119,9 @@ object Form2: TForm2
         ParentFont = False
         TabOrder = 0
         object CheckAttack9: TRadioButton
-          Left = 1184
+          Left = 712
           Height = 70
-          Top = 56
+          Top = 88
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack1'
@@ -4130,9 +4130,9 @@ object Form2: TForm2
           TabOrder = 0
         end
         object CheckAttack10: TRadioButton
-          Left = 32
+          Left = 24
           Height = 70
-          Top = 56
+          Top = 0
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack2'
@@ -4141,9 +4141,9 @@ object Form2: TForm2
           TabOrder = 1
         end
         object CheckAttack11: TRadioButton
-          Left = 408
+          Left = 24
           Height = 70
-          Top = 56
+          Top = 88
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack3'
@@ -4152,9 +4152,9 @@ object Form2: TForm2
           TabOrder = 2
         end
         object CheckAttack12: TRadioButton
-          Left = 792
+          Left = 712
           Height = 70
-          Top = 56
+          Top = 0
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack4'
@@ -4163,9 +4163,9 @@ object Form2: TForm2
           TabOrder = 3
         end
         object SwitchSpicker3: TRadioButton
-          Left = 1576
+          Left = 1416
           Height = 70
-          Top = 56
+          Top = 48
           Width = 416
           Align = alCustom
           Caption = 'Spicker Wechseln'
@@ -4209,9 +4209,9 @@ object Form2: TForm2
         ParentFont = False
         TabOrder = 0
         object CheckAttack13: TRadioButton
-          Left = 1184
+          Left = 760
           Height = 70
-          Top = 56
+          Top = 96
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack1'
@@ -4222,7 +4222,7 @@ object Form2: TForm2
         object CheckAttack14: TRadioButton
           Left = 32
           Height = 70
-          Top = 56
+          Top = 8
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack2'
@@ -4231,9 +4231,9 @@ object Form2: TForm2
           TabOrder = 1
         end
         object CheckAttack15: TRadioButton
-          Left = 408
+          Left = 32
           Height = 70
-          Top = 56
+          Top = 96
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack3'
@@ -4242,9 +4242,9 @@ object Form2: TForm2
           TabOrder = 2
         end
         object CheckAttack16: TRadioButton
-          Left = 792
+          Left = 760
           Height = 70
-          Top = 56
+          Top = 8
           Width = 331
           Align = alCustom
           Caption = 'CheckAttack4'
@@ -4253,9 +4253,9 @@ object Form2: TForm2
           TabOrder = 3
         end
         object SwitchSpicker4: TRadioButton
-          Left = 1576
+          Left = 1488
           Height = 70
-          Top = 56
+          Top = 48
           Width = 416
           Align = alCustom
           Caption = 'Spicker Wechseln'
