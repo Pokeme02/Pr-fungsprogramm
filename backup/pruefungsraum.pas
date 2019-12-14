@@ -56,6 +56,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure CheckAttack1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure LabeledEdit1Change(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
@@ -803,7 +804,7 @@ end;
 
 
 
-end;
+
 
 procedure TForm2.Button2Click(Sender: TObject);
 begin
@@ -821,6 +822,11 @@ begin
     SpickerTab1.Enabled:= True;
     SpickerTab2.Enabled:= True;
   end;
+end;
+
+procedure TForm2.CheckAttack1Change(Sender: TObject);
+begin
+
 end;
 
 procedure TForm2.SpickerTab1Enter(Sender: TObject);

@@ -9,7 +9,7 @@
         <Filename Value="DieHochschuledasSpiel.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="41" Y="19"/>
-        <UsageCount Value="120"/>
+        <UsageCount Value="121"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -22,7 +22,8 @@
         <EditorIndex Value="3"/>
         <TopLine Value="208"/>
         <CursorPos X="37" Y="50"/>
-        <UsageCount Value="120"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="121"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -35,11 +36,11 @@
         <UnitName Value="Pruefungsraum"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="764"/>
-        <CursorPos X="7" Y="801"/>
-        <FoldState Value=" T1-9032H"/>
-        <ComponentState Value="1"/>
-        <UsageCount Value="120"/>
+        <TopLine Value="732"/>
+        <CursorPos X="17" Y="829"/>
+        <FoldState Value=" T1-F032a"/>
+        <ComponentState Value="2"/>
+        <UsageCount Value="121"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -87,18 +88,17 @@
       <Unit8>
         <Filename Value="pruefungsraum.lfm"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="3938"/>
+        <TopLine Value="3898"/>
         <UsageCount Value="51"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit8>
       <Unit9>
-        <Filename Value="C:\Users\olive\Downloads\pruefungsraum.lfm"/>
-        <EditorIndex Value="6"/>
+        <Filename Value="..\..\..\..\olive\Downloads\pruefungsraum.lfm"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="7055"/>
         <CursorPos X="27" Y="6914"/>
         <UsageCount Value="50"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit9>
       <Unit10>
@@ -113,123 +113,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="204" Column="3" TopLine="169"/>
+        <Caret Line="379" Column="16" TopLine="350"/>
       </Position1>
       <Position2>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="205" Column="3" TopLine="170"/>
+        <Caret Line="209" Column="18" TopLine="184"/>
       </Position2>
       <Position3>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="351" Column="45" TopLine="176"/>
+        <Caret Line="211" Column="5" TopLine="184"/>
       </Position3>
       <Position4>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="379" Column="16" TopLine="350"/>
+        <Caret Line="205" Column="12" TopLine="179"/>
       </Position4>
       <Position5>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="209" Column="18" TopLine="184"/>
+        <Caret Line="211" Column="10" TopLine="179"/>
       </Position5>
       <Position6>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="211" Column="5" TopLine="184"/>
+        <Caret Line="209" Column="18" TopLine="184"/>
       </Position6>
       <Position7>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="205" Column="12" TopLine="179"/>
+        <Caret Line="217" Column="5" TopLine="174"/>
       </Position7>
       <Position8>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="211" Column="10" TopLine="179"/>
+        <Caret Line="208" Column="5" TopLine="183"/>
       </Position8>
       <Position9>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="209" Column="18" TopLine="184"/>
+        <Caret Line="57" Column="22" TopLine="37"/>
       </Position9>
       <Position10>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="217" Column="5" TopLine="174"/>
+        <Caret Line="369" Column="5" TopLine="354"/>
       </Position10>
       <Position11>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="208" Column="5" TopLine="183"/>
+        <Caret Line="60" Column="51" TopLine="44"/>
       </Position11>
       <Position12>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="57" Column="22" TopLine="37"/>
+        <Caret Line="61" Column="51" TopLine="45"/>
       </Position12>
       <Position13>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="369" Column="5" TopLine="354"/>
+        <Caret Line="345" TopLine="338"/>
       </Position13>
       <Position14>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="60" Column="51" TopLine="44"/>
+        <Caret Line="62" Column="15" TopLine="45"/>
       </Position14>
       <Position15>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="61" Column="51" TopLine="45"/>
+        <Caret Line="379" Column="5" TopLine="338"/>
       </Position15>
       <Position16>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="345" TopLine="338"/>
+        <Caret Line="353" Column="24" TopLine="338"/>
       </Position16>
       <Position17>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="62" Column="15" TopLine="45"/>
+        <Caret Line="355" Column="3" TopLine="338"/>
       </Position17>
       <Position18>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="379" Column="5" TopLine="338"/>
+        <Caret Line="364" Column="3" TopLine="125"/>
       </Position18>
       <Position19>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="353" Column="24" TopLine="338"/>
+        <Caret Line="257" Column="32" TopLine="245"/>
       </Position19>
       <Position20>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="355" Column="3" TopLine="338"/>
+        <Caret Line="235" Column="39" TopLine="219"/>
       </Position20>
       <Position21>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="364" Column="3" TopLine="125"/>
+        <Caret Line="259" TopLine="255"/>
       </Position21>
       <Position22>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="257" Column="32" TopLine="245"/>
+        <Caret Line="373" Column="49" TopLine="345"/>
       </Position22>
       <Position23>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="235" Column="39" TopLine="219"/>
+        <Caret Line="487" Column="23" TopLine="463"/>
       </Position23>
       <Position24>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="259" TopLine="255"/>
+        <Caret Line="492" Column="5" TopLine="461"/>
       </Position24>
       <Position25>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="373" Column="49" TopLine="345"/>
+        <Caret Line="490" Column="12" TopLine="470"/>
       </Position25>
       <Position26>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="487" Column="23" TopLine="463"/>
+        <Caret Line="556" Column="44" TopLine="523"/>
       </Position26>
       <Position27>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="492" Column="5" TopLine="461"/>
+        <Caret Line="805" Column="25" TopLine="765"/>
       </Position27>
       <Position28>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="490" Column="12" TopLine="470"/>
+        <Caret Line="801" Column="7" TopLine="764"/>
       </Position28>
       <Position29>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="556" Column="44" TopLine="523"/>
+        <Caret Line="733" Column="8" TopLine="715"/>
       </Position29>
       <Position30>
         <Filename Value="pruefungsraum.pas"/>
-        <Caret Line="805" Column="25" TopLine="765"/>
+        <Caret Line="488" Column="60" TopLine="488"/>
       </Position30>
     </JumpHistory>
     <RunParams>
