@@ -395,9 +395,9 @@ begin
 
   LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
 
-  Spicker1Lifepoints:= 100;
-  Spicker2Lifepoints:= 100;
-  Spicker3Lifepoints:= 100;
+  Spicker1Lifepoints:= 5;
+  Spicker2Lifepoints:= 5;
+  Spicker3Lifepoints:= 5;
   ProfLifepoints:= 100;
 
   LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
@@ -414,12 +414,89 @@ procedure TForm2.LabeledEdit1Change(Sender: TObject);
 begin
     if Spicker1Lifepoints <= 0 then
   begin
-      LabeledEdit2.Text:= '0';
+      SpickerTab2.Enabled:= True;
+      SpickerTab3.Enabled:= True;
 
-      PageControl1.ActivePageIndex:= 2;
-      SpickerTab1.Enabled:= false;
+      Spicker1Lifepoints:= 0;
+
+      if Spicker2Lifepoints > 0 then
+      begin
+          PageControl1.ActivePage:= SpickerTab2;
+          LabeledEdit1.EditLabel.Caption:= SpickerTab2.Caption;
+          LabeledEdit1.Text:= IntToStr(Spicker2Lifepoints);
+      end
+      else if Spicker3Lifepoints > 0 then
+      begin
+          PageControl1.ActivePage:= SpickerTab3;
+          LabeledEdit1.EditLabel.Caption:= SpickerTab3.Caption;
+          LabeledEdit1.Text:= IntToStr(Spicker3Lifepoints);
+      end
+      else begin
+         Memo1.Font.Height:= 100;
+         Memo1.Lines.Add('VERLOREN!');
+         PageControl1.Enabled:= False;
+         LabeledEdit1.Visible:= False;
+         LabeledEdit2.Visible:= False;
+      end;
   end;
+
+    if Spicker2Lifepoints <= 0 then
+      begin
+        SpickerTab3.Enabled:= True;
+        SpickerTab1.Enabled:= True;
+
+        Spicker2Lifepoints:= 0;
+
+        if Spicker1Lifepoints > 0 then
+        begin
+            PageControl1.ActivePage:= SpickerTab1;
+            LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
+            LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
+        end
+        else if Spicker3Lifepoints > 0 then
+        begin
+            PageControl1.ActivePage:= SpickerTab3;
+            LabeledEdit1.EditLabel.Caption:= SpickerTab3.Caption;
+            LabeledEdit1.Text:= IntToStr(Spicker3Lifepoints);
+        end
+        else begin
+         Memo1.Font.Height:= 100;
+         Memo1.Lines.Add('VERLOREN!');
+         PageControl1.Enabled:= False;
+         LabeledEdit1.Visible:= False;
+         LabeledEdit2.Visible:= False;
+        end;
+      end;
+    if Spicker3Lifepoints <= 0 then
+      begin
+           SpickerTab1.Enabled:= True;
+           SpickerTab2.Enabled:= True;
+
+           Spicker3Lifepoints:= 0;
+
+        if Spicker1Lifepoints > 0 then
+        begin
+            PageControl1.ActivePage:= SpickerTab1;
+            LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
+            LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
+        end
+        else if Spicker2Lifepoints > 0 then
+        begin
+            PageControl1.ActivePage:= SpickerTab2;
+            LabeledEdit1.EditLabel.Caption:= SpickerTab2.Caption;
+            LabeledEdit1.Text:= IntToStr(Spicker2Lifepoints);
+        end
+        else begin
+         Memo1.Font.Height:= 100;
+         Memo1.Lines.Add('VERLOREN!');
+         PageControl1.Enabled:= False;
+         LabeledEdit1.Visible:= False;
+         LabeledEdit2.Visible:= False;
+        end;
+      end;
 end;
+
+
 
 //prof hp nicht unter null + Endscreen auslösen
 procedure TForm2.LabeledEdit2Change(Sender: TObject);
