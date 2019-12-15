@@ -395,9 +395,9 @@ begin
 
   LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
 
-  Spicker1Lifepoints:= 5;
-  Spicker2Lifepoints:= 5;
-  Spicker3Lifepoints:= 5;
+  Spicker1Lifepoints:= 100;
+  Spicker2Lifepoints:= 100;
+  Spicker3Lifepoints:= 100;
   ProfLifepoints:= 100;
 
   LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);

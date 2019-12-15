@@ -422,18 +422,21 @@ begin
       if Spicker2Lifepoints > 0 then
       begin
           PageControl1.ActivePage:= SpickerTab2;
+          LabeledEdit1.EditLabel.Caption:= SpickerTab2.Caption;
           LabeledEdit1.Text:= IntToStr(Spicker2Lifepoints);
       end
       else if Spicker3Lifepoints > 0 then
       begin
           PageControl1.ActivePage:= SpickerTab3;
-
+          LabeledEdit1.EditLabel.Caption:= SpickerTab3.Caption;
           LabeledEdit1.Text:= IntToStr(Spicker3Lifepoints);
       end
       else begin
-         Memo1.Font.Height:= 80;
+         Memo1.Font.Height:= 100;
          Memo1.Lines.Add('VERLOREN!');
          PageControl1.Enabled:= False;
+         LabeledEdit1.Visible:= False;
+         LabeledEdit2.Visible:= False;
       end;
   end;
 
@@ -447,17 +450,21 @@ begin
         if Spicker1Lifepoints > 0 then
         begin
             PageControl1.ActivePage:= SpickerTab1;
+            LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
             LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
         end
         else if Spicker3Lifepoints > 0 then
         begin
             PageControl1.ActivePage:= SpickerTab3;
+            LabeledEdit1.EditLabel.Caption:= SpickerTab3.Caption;
             LabeledEdit1.Text:= IntToStr(Spicker3Lifepoints);
         end
         else begin
-         Memo1.Font.Height:= 80;
+         Memo1.Font.Height:= 100;
          Memo1.Lines.Add('VERLOREN!');
          PageControl1.Enabled:= False;
+         LabeledEdit1.Visible:= False;
+         LabeledEdit2.Visible:= False;
         end;
       end;
     if Spicker3Lifepoints <= 0 then
@@ -470,17 +477,21 @@ begin
         if Spicker1Lifepoints > 0 then
         begin
             PageControl1.ActivePage:= SpickerTab1;
+            LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
             LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
         end
         else if Spicker2Lifepoints > 0 then
         begin
             PageControl1.ActivePage:= SpickerTab2;
+            LabeledEdit1.EditLabel.Caption:= SpickerTab2.Caption;
             LabeledEdit1.Text:= IntToStr(Spicker2Lifepoints);
         end
         else begin
-         Memo1.Font.Height:= 80;
+         Memo1.Font.Height:= 100;
          Memo1.Lines.Add('VERLOREN!');
          PageControl1.Enabled:= False;
+         LabeledEdit1.Visible:= False;
+         LabeledEdit2.Visible:= False;
         end;
       end;
 end;
