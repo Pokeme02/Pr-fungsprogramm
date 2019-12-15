@@ -5,7 +5,8 @@ unit Spickerwahl;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Pruefungsraum;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+  Pruefungsraum;
 
 type
 
@@ -18,6 +19,7 @@ type
     GewaehltLabel4: TLabel;
     GewaehltLabel5: TLabel;
     GewaehltLabel6: TLabel;
+    Image1: TImage;
     WeiterzurPruefungButton: TButton;
     MatheSpickerButton1: TButton;
     WISPickerButton2: TButton;

@@ -150,7 +150,7 @@ end;
 procedure TForm2.FormCreate(Sender: TObject);
 begin
   MatheArray[1]:= 'Differentialgleichung';
-  MatheArray[2]:= 'BinomischeFormeln';
+  MatheArray[2]:= 'Binomische Formeln';
   MatheArray[3]:= 'PQFormel';
   MatheArray[4]:= 'Dreisatz';
   MatheArray[5]:= 'Potenzgesetze';
@@ -162,26 +162,26 @@ begin
   GWAArray[5]:= 'Paesentiertechniken';
 
   WIArray[1]:=  'Datenbanken';
-  WIArray[2]:=  'Neumann_Architektur';
-  WIArray[3]:=  'Arithmetische_Befehle';
-  WIArray[4]:=  'Rechner_Struktur';
+  WIArray[2]:=  'Neumann Architektur';
+  WIArray[3]:=  'Arithmetische Befehle';
+  WIArray[4]:=  'Rechner Struktur';
   WIArray[5]:=  'CSP';
 
-  TIArray[1]:=  'Boolesche_Funktionen';
-  TIArray[2]:=  'KV_Diagramme';
+  TIArray[1]:=  'Boolesche Funktionen';
+  TIArray[2]:=  'KV Diagramme';
   TIArray[3]:=  'URI';
   TIArray[4]:=  'ASCII';
-  TIArray[5]:=  'Zweier_Komplement';
+  TIArray[5]:=  'Zweier Komplement';
 
   ProgrammierenArray[1]:= 'ForSchleife';
-  ProgrammierenArray[2]:= 'While_Schleife';
+  ProgrammierenArray[2]:= 'While Schleife';
   ProgrammierenArray[3]:= 'Zuweisungsstatements';
   ProgrammierenArray[4]:= 'GUI';
   ProgrammierenArray[5]:= 'Semikolon';
 
-  BWLArray[1]:= 'ABC_Analyse';
+  BWLArray[1]:= 'ABC Analyse';
   BWLArray[2]:= 'Lagerhaltung';
-  BWLArray[3]:= 'EVA_Prinzip';
+  BWLArray[3]:= 'EVA Prinzip';
   BWLArray[4]:= 'Prozessmamagement';
   BWLArray[5]:= 'Produktionsfaktoren';
 
@@ -392,7 +392,7 @@ begin
 
   FightCounter:= 1;
   
-  LabeledEdit2.EditLabel.Caption:= 'Schomaker';
+  LabeledEdit2.EditLabel.Caption:= 'Rauscher';
 
   LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
 
@@ -607,7 +607,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = 'Binomische_Formeln' then
+    else if CheckAttack2.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -928,7 +928,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = 'Binomische_Formeln' then
+    else if CheckAttack4.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);

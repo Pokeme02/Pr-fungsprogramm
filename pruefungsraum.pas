@@ -149,6 +149,7 @@ end;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
+  // Arrays Mit Namen der Angriffe
   MatheArray[1]:= 'Differentialgleichung';
   MatheArray[2]:= 'Binomische Formeln';
   MatheArray[3]:= 'PQFormel';
@@ -192,7 +193,7 @@ begin
   OpponentAttackArray[5]:= 'Taschenrechner weg';
 
 
-
+  // Random Zahlen für Attackenzuweisung
   RandomMath:= Random(3);
   RandomMath2:= Random(2) + 3;
   RandomGWA:=  Random(3);
@@ -206,6 +207,7 @@ begin
   RandomBWL:= Random(3);
   RandomBWL2:= Random(2) + 3;
 
+  //Zuweisung der Tabnamen durch ID's
   if IDArray[1] = 1 then
     begin
         SpickerTab1.Caption := 'Mathe';
@@ -392,7 +394,7 @@ begin
 
   FightCounter:= 1;
   
-  LabeledEdit2.EditLabel.Caption:= 'Schomaker';
+  LabeledEdit2.EditLabel.Caption:= 'Rauscher';
 
   LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
 
@@ -410,6 +412,7 @@ begin
 
 end;
 
+//spicker hp nicht unter null + spicker disabled
 procedure TForm2.LabeledEdit1Change(Sender: TObject);
 begin
     if Spicker1Lifepoints <= 0 then
@@ -421,6 +424,7 @@ begin
   end;
 end;
 
+//prof hp nicht unter null + Endscreen auslösen
 procedure TForm2.LabeledEdit2Change(Sender: TObject);
 begin
   if ProfLifepoints <= 0 then
@@ -928,7 +932,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = 'Binomische_Formeln' then
+    else if CheckAttack4.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
