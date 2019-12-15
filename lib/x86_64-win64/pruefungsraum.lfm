@@ -4,8 +4,8 @@ object Form2: TForm2
   Top = 116
   Width = 2950
   Caption = 'Form2'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 1665
+  ClientWidth = 2950
   DesignTimePPI = 192
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
@@ -3912,9 +3912,9 @@ object Form2: TForm2
     Height = 272
     Top = 1376
     Width = 3075
-    ActivePage = SpickerTab1
+    ActivePage = SpickerTab3
     ParentFont = False
-    TabIndex = 0
+    TabIndex = 2
     TabOrder = 0
     OnChange = PageControl1Change
     object SpickerTab1: TTabSheet
@@ -4296,7 +4296,6 @@ object Form2: TForm2
     ParentFont = False
     TabOrder = 1
     Text = '100'
-    OnChange = LabeledEdit1Change
   end
   object LabeledEdit2: TLabeledEdit
     Left = 1944
@@ -4319,10 +4318,24 @@ object Form2: TForm2
     TabOrder = 2
     Text = '100'
   end
+  object Memo1: TMemo
+    Left = 2245
+    Height = 693
+    Top = 499
+    Width = 675
+    Color = clNone
+    Enabled = False
+    Lines.Strings = (
+      'Memo1'
+    )
+    ReadOnly = True
+    TabOrder = 3
+  end
   object Delay: TTimer
     Enabled = False
     Interval = 3000
     OnTimer = DelayTimer
+    OnStartTimer = DelayStartTimer
     left = 59
     top = 71
   end

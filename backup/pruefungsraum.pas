@@ -34,6 +34,7 @@ type
     Image1: TImage;
     LabeledEdit1: TLabeledEdit;
     LabeledEdit2: TLabeledEdit;
+    Memo1: TMemo;
     PageControl1: TPageControl;
     RadioAttack1: TRadioGroup;
     CheckAttack1: TRadioButton;
@@ -62,9 +63,9 @@ type
     procedure CheckAttack1Change(Sender: TObject);
     procedure Delay1Timer(Sender: TObject);
     procedure Delay2Timer(Sender: TObject);
+    procedure DelayStartTimer(Sender: TObject);
     procedure DelayTimer(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure LabeledEdit1Change(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
     procedure SpickerTab1Enter(Sender: TObject);
     procedure SpickerTab2Enter(Sender: TObject);
@@ -74,41 +75,6 @@ type
   public
 
   end;
-
-  type Spicke = class
-    private
-      Name: String;
-      ID: Integer;
-      Lifepoints: Integer;
-      Typ: String;
-
-  end;
-    type Profs = class
-    private
-      Name: String;
-      ID: Integer;
-      OwnAttacks: array[1..4] of Integer;
-      Lifepoints: Integer;
-      Typ: String;
-
-  end;
-      type ProfAttacken= class
-    private
-      Name: String;
-      ID: Integer;
-
-      Damage: Integer;
-      Typ: String;
-
-  end;
-
-  //type Attack = class
-  //  private
-  //    Name: String;
-  //    AttackPoints: Integer;
-  //    ID: Integer;
-  //    Typ: String;
-  //end;
 
 
 
@@ -151,19 +117,6 @@ implementation
 
 { TForm2 }
 
-
-procedure ProfDamage(Damage: Integer);
-      begin
-           ProfLifepoints:= ProfLifepoints - Damage;
-      end;
-
-//procedure SpickerDamage(Damage: Integer);
-//begin
-//     SpickerLifepoints:= SpickerLifepoints - Damage;
-//end;
-
-
-
 procedure TForm2.PageControl1Change(Sender: TObject);
 begin
   if PageControl1.TabIndex = SpickerTab1.PageIndex then
@@ -186,9 +139,6 @@ begin
       LabeledEdit1.EditLabel.Caption:= SpecialSpickerTab.Caption;
   end
 end;
-
-
-
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
@@ -449,18 +399,11 @@ begin
 
 end;
 
-procedure TForm2.LabeledEdit1Change(Sender: TObject);
-begin
 
-end;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
-  if SwitchSpicker1.Checked = True then
-  begin
-    SpickerTab2.Enabled:= True;
-    SpickerTab3.Enabled:= True;
-  end;
+
 
   if CheckAttack1.Checked = True then
   begin
@@ -469,7 +412,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = 'Binomische_Formeln' then
+    else if CheckAttack1.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -619,6 +562,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack1.Caption + 'ein');
   end;
 
   if CheckAttack2.Checked = True then
@@ -778,6 +722,8 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack2.Caption + 'ein');
   end;
 
        if CheckAttack3.Checked = True then
@@ -937,6 +883,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack3.Caption + 'ein');
   end;
 
   if CheckAttack4.Checked = True then
@@ -1096,6 +1043,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack4.Caption + 'ein');
   end;
 
   Delay.Enabled:= True;
@@ -1108,11 +1056,7 @@ end;
 
 procedure TForm2.Button2Click(Sender: TObject);
 begin
-  if SwitchSpicker2.Checked = True then
-  begin
-    SpickerTab1.Enabled:= True;
-    SpickerTab3.Enabled:= True;
-  end;
+
       if CheckAttack5.Checked = True then
   begin
     if CheckAttack5.Caption = 'Differentialgleichung' then
@@ -1754,11 +1698,7 @@ end;
 
 procedure TForm2.Button3Click(Sender: TObject);
 begin
-  if SwitchSpicker3.Checked = True then
-  begin
-    SpickerTab1.Enabled:= True;
-    SpickerTab2.Enabled:= True;
-  end;
+
        if CheckAttack9.Checked = True then
   begin
     if CheckAttack9.Caption = 'Differentialgleichung' then
@@ -2423,8 +2363,20 @@ begin
   begin
      Spicker2Lifepoints:= Spicker2Lifepoints - 18;
   end;
-
+   if SwitchSpicker1.Checked = False then
+  begin
   LabeledEdit1.Text:= IntToStr(Spicker2Lifepoints);
+  end;
+
+  if SwitchSpicker2.Checked = True then
+  begin
+    SpickerTab1.Enabled:= True;
+    SpickerTab3.Enabled:= True;
+  end;
+
+  Delay1.Enabled:= False;
+
+  Button2.Enabled:= True;
 end;
 
 procedure TForm2.DelayTimer(Sender: TObject);
@@ -2447,9 +2399,20 @@ begin
   begin
      Spicker1Lifepoints:= Spicker1Lifepoints - 18;
   end;
-
+   if SwitchSpicker1.Checked = False then
+  begin
   LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
+  end;
 
+  if SwitchSpicker1.Checked = True then
+  begin
+    SpickerTab2.Enabled:= True;
+    SpickerTab3.Enabled:= True;
+  end;
+
+  Delay.Enabled:= False;
+
+  Button1.Enabled:= True;
 end;
 
 
@@ -2473,9 +2436,24 @@ begin
   begin
      Spicker3Lifepoints:= Spicker3Lifepoints - 18;
   end;
-
+  if SwitchSpicker3.Checked = False then
+  begin
   LabeledEdit1.Text:= IntToStr(Spicker3Lifepoints);
+  end;
 
+  if SwitchSpicker3.Checked = True then
+  begin
+    SpickerTab1.Enabled:= True;
+    SpickerTab2.Enabled:= True;
+  end;
+
+  Delay2.Enabled:= False;
+  Button3.Enabled:= True;
+end;
+
+procedure TForm2.DelayStartTimer(Sender: TObject);
+begin
+  Button1.Enabled:= False;
 end;
 
 
