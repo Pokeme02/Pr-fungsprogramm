@@ -4,8 +4,8 @@ object Form2: TForm2
   Top = 116
   Width = 2950
   Caption = 'Form2'
-  ClientHeight = 1665
-  ClientWidth = 2950
+  ClientHeight = 0
+  ClientWidth = 0
   DesignTimePPI = 192
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
@@ -4296,6 +4296,7 @@ object Form2: TForm2
     ParentFont = False
     TabOrder = 1
     Text = '100'
+    OnChange = LabeledEdit1Change
   end
   object LabeledEdit2: TLabeledEdit
     Left = 1944
@@ -4317,6 +4318,7 @@ object Form2: TForm2
     ParentFont = False
     TabOrder = 2
     Text = '100'
+    OnChange = LabeledEdit2Change
   end
   object Memo1: TMemo
     Left = 2245
@@ -4343,6 +4345,7 @@ object Form2: TForm2
     Enabled = False
     Interval = 3000
     OnTimer = Delay1Timer
+    OnStartTimer = Delay1StartTimer
     left = 59
     top = 71
   end
@@ -4350,6 +4353,7 @@ object Form2: TForm2
     Enabled = False
     Interval = 3000
     OnTimer = Delay2Timer
+    OnStartTimer = Delay2StartTimer
     left = 59
     top = 71
   end

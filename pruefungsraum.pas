@@ -61,11 +61,15 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure CheckAttack1Change(Sender: TObject);
+    procedure Delay1StartTimer(Sender: TObject);
     procedure Delay1Timer(Sender: TObject);
+    procedure Delay2StartTimer(Sender: TObject);
     procedure Delay2Timer(Sender: TObject);
     procedure DelayStartTimer(Sender: TObject);
     procedure DelayTimer(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure LabeledEdit1Change(Sender: TObject);
+    procedure LabeledEdit2Change(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
     procedure SpickerTab1Enter(Sender: TObject);
     procedure SpickerTab2Enter(Sender: TObject);
@@ -399,6 +403,25 @@ begin
 
 end;
 
+procedure TForm2.LabeledEdit1Change(Sender: TObject);
+begin
+    if Spicker1Lifepoints <= 0 then
+  begin
+      LabeledEdit2.Text:= '0';
+
+      PageControl1.ActivePageIndex:= 2;
+      SpickerTab1.Enabled:= false;
+  end;
+end;
+
+procedure TForm2.LabeledEdit2Change(Sender: TObject);
+begin
+  if ProfLifepoints <= 0 then
+  begin
+      LabeledEdit2.Text:= '0';
+  end;
+end;
+
 
 
 procedure TForm2.Button1Click(Sender: TObject);
@@ -562,7 +585,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
-    Memo1.Lines.Add('Spicker setzt ' + CheckAttack1.Caption + 'ein');
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack1.Caption + ' ein');
   end;
 
   if CheckAttack2.Checked = True then
@@ -723,7 +746,7 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    Memo1.Lines.Add('Spicker setzt ' + CheckAttack2.Caption + 'ein');
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack2.Caption + ' ein');
   end;
 
        if CheckAttack3.Checked = True then
@@ -883,7 +906,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
-    Memo1.Lines.Add('Spicker setzt ' + CheckAttack3.Caption + 'ein');
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack3.Caption + ' ein');
   end;
 
   if CheckAttack4.Checked = True then
@@ -1043,10 +1066,16 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
-    Memo1.Lines.Add('Spicker setzt ' + CheckAttack4.Caption + 'ein');
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack4.Caption + ' ein');
   end;
 
   Delay.Enabled:= True;
+
+  if SwitchSpicker1.Checked = True then
+  begin
+    SpickerTab2.Enabled:= True;
+    SpickerTab3.Enabled:= True;
+  end;
 
 end;
 
@@ -1214,6 +1243,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack5.Caption + ' ein');
   end;
 
   if CheckAttack6.Checked = True then
@@ -1373,6 +1403,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack4.Caption + ' ein');
   end;
     if CheckAttack7.Checked = True then
   begin
@@ -1531,6 +1562,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack4.Caption + ' ein');
   end;
 
   if CheckAttack8.Checked = True then
@@ -1690,9 +1722,16 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack8.Caption + ' ein');
   end;
 
   Delay1.Enabled:= True;
+
+  if SwitchSpicker2.Checked = True then
+  begin
+    SpickerTab1.Enabled:= True;
+    SpickerTab3.Enabled:= True;
+  end;
 
 end;
 
@@ -1856,6 +1895,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack9.Caption + ' ein');
   end;
 
   if CheckAttack10.Checked = True then
@@ -2015,6 +2055,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack10.Caption + ' ein');
   end;
       if CheckAttack11.Checked = True then
   begin
@@ -2173,6 +2214,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack11.Caption + ' ein');
   end;
 
   if CheckAttack12.Checked = True then
@@ -2332,9 +2374,16 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack12.Caption + ' ein');
   end;
 
   Delay2.Enabled:= True;
+
+  if SwitchSpicker3.Checked = True then
+  begin
+    SpickerTab1.Enabled:= True;
+    SpickerTab2.Enabled:= True;
+  end;
 
 end;
 
@@ -2343,40 +2392,78 @@ begin
 
 end;
 
+procedure TForm2.Delay1StartTimer(Sender: TObject);
+begin
+  Button2.Enabled:= False;
+  if ProfLifepoints <= 0 then
+  begin
+   Memo1.Lines.Add('DER PROF IST BESIEGT!');
+   Memo1.Lines.Add('DU HAST GEWONNEN!');
+  end;
+end;
+
 procedure TForm2.Delay1Timer(Sender: TObject);
 begin
    RandomDamage:= Random(5);
 
   if RandomDamage = 1 then
   begin
+   if ProfLifepoints > 0 then
+    begin
      Spicker2Lifepoints:= Spicker2Lifepoints - 10;
+     Memo1.Lines.Add('Der Professor geht eine Runde');
+    end;
+  end
+  else if RandomDamage = 2 then
+  begin
+   if ProfLifepoints > 0 then
+    begin
+    Memo1.Lines.Add('Der Professor trinkt Kaffee');
+    end;
   end
   else if RandomDamage = 3 then
   begin
+  if ProfLifepoints > 0 then
+    begin
      Spicker2Lifepoints:= Spicker2Lifepoints - 12;
+     Memo1.Lines.Add('Der Professor steht hinter dir');
+    end;
   end
   else if RandomDamage = 4 then
   begin
+  if ProfLifepoints > 0 then
+    begin
      Spicker2Lifepoints:= Spicker2Lifepoints - 15;
+     Memo1.Lines.Add('Der Professor kontrolliert deine Federmappe');
+    end;
   end
   else if RandomDamage = 5 then
   begin
+  if ProfLifepoints > 0 then
+    begin
      Spicker2Lifepoints:= Spicker2Lifepoints - 18;
+     Memo1.Lines.Add('Der Professor findet einen Spicken');
+    end;
   end;
-   if SwitchSpicker1.Checked = False then
+   if SwitchSpicker2.Checked = False then
   begin
   LabeledEdit1.Text:= IntToStr(Spicker2Lifepoints);
   end;
 
-  if SwitchSpicker2.Checked = True then
-  begin
-    SpickerTab1.Enabled:= True;
-    SpickerTab3.Enabled:= True;
-  end;
 
   Delay1.Enabled:= False;
 
   Button2.Enabled:= True;
+end;
+
+procedure TForm2.Delay2StartTimer(Sender: TObject);
+begin
+  Button3.Enabled:= False;
+  if ProfLifepoints <= 0 then
+  begin
+   Memo1.Lines.Add('DER PROF IST BESIEGT!');
+   Memo1.Lines.Add('DU HAST GEWONNEN!');
+  end;
 end;
 
 procedure TForm2.DelayTimer(Sender: TObject);
@@ -2385,27 +2472,42 @@ begin
 
   if RandomDamage = 1 then
   begin
+    if ProfLifepoints > 0 then
+    begin
      Spicker1Lifepoints:= Spicker1Lifepoints - 10;
      Memo1.Lines.Add('Der Professor geht eine Runde');
+    end;
   end
   else if RandomDamage = 2 then
   begin
+    if ProfLifepoints > 0 then
+    begin
     Memo1.Lines.Add('Der Professor trinkt Kaffee');
+    end;
   end
   else if RandomDamage = 3 then
   begin
+       if ProfLifepoints > 0 then
+    begin
      Spicker1Lifepoints:= Spicker1Lifepoints - 12;
      Memo1.Lines.Add('Der Professor steht hinter dir');
+    end;
   end
   else if RandomDamage = 4 then
   begin
+    if ProfLifepoints > 0 then
+    begin
      Spicker1Lifepoints:= Spicker1Lifepoints - 15;
      Memo1.Lines.Add('Der Professor kontrolliert deine Federmappe');
+    end;
   end
   else if RandomDamage = 5 then
   begin
+   if ProfLifepoints > 0 then
+    begin
      Spicker1Lifepoints:= Spicker1Lifepoints - 18;
      Memo1.Lines.Add('Der Professor findet einen Spicken');
+    end;
   end;
    if SwitchSpicker1.Checked = False then
   begin
@@ -2430,30 +2532,48 @@ begin
 
   if RandomDamage = 1 then
   begin
+   if ProfLifepoints > 0 then
+    begin
      Spicker3Lifepoints:= Spicker3Lifepoints - 10;
+     Memo1.Lines.Add('Der Professor geht eine Runde');
+    end;
+  end
+  else if RandomDamage = 2 then
+  begin
+    if ProfLifepoints > 0 then
+    begin
+    Memo1.Lines.Add('Der Professor trinkt Kaffee');
+    end;
   end
   else if RandomDamage = 3 then
   begin
+   if ProfLifepoints > 0 then
+    begin
      Spicker3Lifepoints:= Spicker3Lifepoints - 12;
+     Memo1.Lines.Add('Der Professor steht hinter dir');
+    end;
   end
   else if RandomDamage = 4 then
   begin
+   if ProfLifepoints > 0 then
+    begin
      Spicker3Lifepoints:= Spicker3Lifepoints - 15;
+     Memo1.Lines.Add('Der Professor kontrolliert deine Federmappe');
+    end;
   end
   else if RandomDamage = 5 then
   begin
+   if ProfLifepoints > 0 then
+    begin
      Spicker3Lifepoints:= Spicker3Lifepoints - 18;
+     Memo1.Lines.Add('Der Professor findet einen Spicken');
+    end;
   end;
   if SwitchSpicker3.Checked = False then
   begin
   LabeledEdit1.Text:= IntToStr(Spicker3Lifepoints);
   end;
 
-  if SwitchSpicker3.Checked = True then
-  begin
-    SpickerTab1.Enabled:= True;
-    SpickerTab2.Enabled:= True;
-  end;
 
   Delay2.Enabled:= False;
   Button3.Enabled:= True;
@@ -2462,6 +2582,11 @@ end;
 procedure TForm2.DelayStartTimer(Sender: TObject);
 begin
   Button1.Enabled:= False;
+  if ProfLifepoints <= 0 then
+  begin
+   Memo1.Lines.Add('DER PROF IST BESIEGT!');
+   Memo1.Lines.Add('DU HAST GEWONNEN!');
+  end;
 end;
 
 

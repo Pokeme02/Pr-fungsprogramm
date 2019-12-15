@@ -16,6 +16,7 @@ begin
   RequireDerivedFormResource:=True;
   Application.Scaled:=True;
   Application.Initialize;
+  Application.CreateForm(TForm3, Form3);
   Application.Run;
 end.
 
