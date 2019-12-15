@@ -4,8 +4,8 @@ object Form2: TForm2
   Top = 116
   Width = 2950
   Caption = 'Form2'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 1665
+  ClientWidth = 2950
   DesignTimePPI = 192
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
@@ -3912,9 +3912,9 @@ object Form2: TForm2
     Height = 272
     Top = 1376
     Width = 3075
-    ActivePage = SpickerTab3
+    ActivePage = SpickerTab1
     ParentFont = False
-    TabIndex = 2
+    TabIndex = 0
     TabOrder = 0
     OnChange = PageControl1Change
     object SpickerTab1: TTabSheet
@@ -4327,11 +4327,38 @@ object Form2: TForm2
     Width = 675
     Color = clNone
     Enabled = False
+    Font.Height = 50
     Lines.Strings = (
       'Memo1'
     )
+    ParentFont = False
     ReadOnly = True
     TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 360
+    Height = 500
+    Top = 352
+    Width = 2115
+    Align = alCustom
+    Alignment = taCenter
+    Caption = 'GEWONNEN'
+    Font.Height = 500
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object Button5: TButton
+    Left = 1086
+    Height = 256
+    Top = 842
+    Width = 762
+    Caption = 'VERLASSEN'
+    Font.Height = 150
+    OnClick = Button5Click
+    ParentFont = False
+    TabOrder = 4
+    Visible = False
   end
   object Delay: TTimer
     Enabled = False

@@ -17,6 +17,7 @@ type
     Button3: TButton;
     Button4: TButton;
     Button1: TButton;
+    Button5: TButton;
     CheckAttack10: TRadioButton;
     CheckAttack11: TRadioButton;
     CheckAttack12: TRadioButton;
@@ -32,6 +33,7 @@ type
     Delay1: TTimer;
     Delay2: TTimer;
     Image1: TImage;
+    Label1: TLabel;
     LabeledEdit1: TLabeledEdit;
     LabeledEdit2: TLabeledEdit;
     Memo1: TMemo;
@@ -60,6 +62,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
     procedure CheckAttack1Change(Sender: TObject);
     procedure Delay1StartTimer(Sender: TObject);
     procedure Delay1Timer(Sender: TObject);
@@ -401,6 +404,10 @@ begin
   LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
   LabeledEdit2.Text:= IntToStr(ProfLifepoints);
 
+   Delay.Enabled:= True;
+   Memo1.Clear;
+   Memo1.Lines.Add('Kampf Log');
+
 end;
 
 procedure TForm2.LabeledEdit1Change(Sender: TObject);
@@ -419,6 +426,11 @@ begin
   if ProfLifepoints <= 0 then
   begin
       LabeledEdit2.Text:= '0';
+
+      Label1.Visible:= True;
+      Button5.Visible:= True;
+      Memo1.Visible:= False;
+      PageControl1.Enabled:= False;
   end;
 end;
 
@@ -1071,6 +1083,12 @@ begin
 
   Delay.Enabled:= True;
 
+  if SwitchSpicker1.Checked = True then
+  begin
+    SpickerTab2.Enabled:= True;
+    SpickerTab3.Enabled:= True;
+  end;
+
 end;
 
 
@@ -1721,6 +1739,12 @@ begin
 
   Delay1.Enabled:= True;
 
+  if SwitchSpicker2.Checked = True then
+  begin
+    SpickerTab1.Enabled:= True;
+    SpickerTab3.Enabled:= True;
+  end;
+
 end;
 
 procedure TForm2.Button3Click(Sender: TObject);
@@ -2367,6 +2391,17 @@ begin
 
   Delay2.Enabled:= True;
 
+  if SwitchSpicker3.Checked = True then
+  begin
+    SpickerTab1.Enabled:= True;
+    SpickerTab2.Enabled:= True;
+  end;
+
+end;
+
+procedure TForm2.Button5Click(Sender: TObject);
+begin
+  Self.Close;
 end;
 
 procedure TForm2.CheckAttack1Change(Sender: TObject);
@@ -2432,11 +2467,6 @@ begin
   LabeledEdit1.Text:= IntToStr(Spicker2Lifepoints);
   end;
 
-  if SwitchSpicker2.Checked = True then
-  begin
-    SpickerTab1.Enabled:= True;
-    SpickerTab3.Enabled:= True;
-  end;
 
   Delay1.Enabled:= False;
 
@@ -2561,11 +2591,6 @@ begin
   LabeledEdit1.Text:= IntToStr(Spicker3Lifepoints);
   end;
 
-  if SwitchSpicker3.Checked = True then
-  begin
-    SpickerTab1.Enabled:= True;
-    SpickerTab2.Enabled:= True;
-  end;
 
   Delay2.Enabled:= False;
   Button3.Enabled:= True;

@@ -153,7 +153,8 @@ begin
     Application.CreateForm(TForm2, Form2);
     Form2.ShowModal; // Shows the Form2
   finally
-    Visible := True; // Makes Form1 visible again
+    //Visible := True; // Makes Form1 visible again
+    Self.Close;
   end;
 end;
 

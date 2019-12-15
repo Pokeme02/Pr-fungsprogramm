@@ -17,6 +17,7 @@ type
     Button3: TButton;
     Button4: TButton;
     Button1: TButton;
+    Button5: TButton;
     CheckAttack10: TRadioButton;
     CheckAttack11: TRadioButton;
     CheckAttack12: TRadioButton;
@@ -32,6 +33,7 @@ type
     Delay1: TTimer;
     Delay2: TTimer;
     Image1: TImage;
+    Label1: TLabel;
     LabeledEdit1: TLabeledEdit;
     LabeledEdit2: TLabeledEdit;
     Memo1: TMemo;
@@ -60,6 +62,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
     procedure CheckAttack1Change(Sender: TObject);
     procedure Delay1StartTimer(Sender: TObject);
     procedure Delay1Timer(Sender: TObject);
@@ -147,7 +150,7 @@ end;
 procedure TForm2.FormCreate(Sender: TObject);
 begin
   MatheArray[1]:= 'Differentialgleichung';
-  MatheArray[2]:= 'BinomischeFormeln';
+  MatheArray[2]:= 'Binomische Formeln';
   MatheArray[3]:= 'PQFormel';
   MatheArray[4]:= 'Dreisatz';
   MatheArray[5]:= 'Potenzgesetze';
@@ -159,26 +162,26 @@ begin
   GWAArray[5]:= 'Paesentiertechniken';
 
   WIArray[1]:=  'Datenbanken';
-  WIArray[2]:=  'Neumann_Architektur';
-  WIArray[3]:=  'Arithmetische_Befehle';
-  WIArray[4]:=  'Rechner_Struktur';
+  WIArray[2]:=  'Neumann Architektur';
+  WIArray[3]:=  'Arithmetische Befehle';
+  WIArray[4]:=  'Rechner Struktur';
   WIArray[5]:=  'CSP';
 
-  TIArray[1]:=  'Boolesche_Funktionen';
-  TIArray[2]:=  'KV_Diagramme';
+  TIArray[1]:=  'Boolesche Funktionen';
+  TIArray[2]:=  'KV Diagramme';
   TIArray[3]:=  'URI';
   TIArray[4]:=  'ASCII';
-  TIArray[5]:=  'Zweier_Komplement';
+  TIArray[5]:=  'Zweier Komplement';
 
   ProgrammierenArray[1]:= 'ForSchleife';
-  ProgrammierenArray[2]:= 'While_Schleife';
+  ProgrammierenArray[2]:= 'While Schleife';
   ProgrammierenArray[3]:= 'Zuweisungsstatements';
   ProgrammierenArray[4]:= 'GUI';
   ProgrammierenArray[5]:= 'Semikolon';
 
-  BWLArray[1]:= 'ABC_Analyse';
+  BWLArray[1]:= 'ABC Analyse';
   BWLArray[2]:= 'Lagerhaltung';
-  BWLArray[3]:= 'EVA_Prinzip';
+  BWLArray[3]:= 'EVA Prinzip';
   BWLArray[4]:= 'Prozessmamagement';
   BWLArray[5]:= 'Produktionsfaktoren';
 
@@ -401,6 +404,10 @@ begin
   LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
   LabeledEdit2.Text:= IntToStr(ProfLifepoints);
 
+   Delay.Enabled:= True;
+   Memo1.Clear;
+   Memo1.Lines.Add('Kampf Log');
+
 end;
 
 procedure TForm2.LabeledEdit1Change(Sender: TObject);
@@ -419,6 +426,11 @@ begin
   if ProfLifepoints <= 0 then
   begin
       LabeledEdit2.Text:= '0';
+
+      Label1.Visible:= True;
+      Button5.Visible:= True;
+      Memo1.Visible:= False;
+      PageControl1.Enabled:= False;
   end;
 end;
 
@@ -595,7 +607,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = 'Binomische_Formeln' then
+    else if CheckAttack2.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -2385,6 +2397,11 @@ begin
     SpickerTab2.Enabled:= True;
   end;
 
+end;
+
+procedure TForm2.Button5Click(Sender: TObject);
+begin
+  Self.Close;
 end;
 
 procedure TForm2.CheckAttack1Change(Sender: TObject);
