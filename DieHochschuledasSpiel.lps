@@ -9,7 +9,7 @@
         <Filename Value="DieHochschuledasSpiel.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="46" Y="22"/>
-        <UsageCount Value="172"/>
+        <UsageCount Value="173"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -19,11 +19,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Spickerwahl"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="143"/>
+        <TopLine Value="186"/>
         <CursorPos X="102" Y="174"/>
-        <UsageCount Value="172"/>
+        <UsageCount Value="173"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -33,11 +32,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Pruefungsraum"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="391"/>
-        <CursorPos X="45" Y="395"/>
-        <FoldState Value=" T0lb483G1{"/>
-        <UsageCount Value="172"/>
+        <TopLine Value="429"/>
+        <CursorPos Y="766"/>
+        <FoldState Value=" T0la48A pibjP486X1U1U p0v42{%^"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="173"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -46,7 +47,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="7992"/>
         <CursorPos X="31" Y="12443"/>
-        <UsageCount Value="79"/>
+        <UsageCount Value="80"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit3>
@@ -56,13 +57,13 @@
         <EditorIndex Value="2"/>
         <TopLine Value="5"/>
         <CursorPos X="43" Y="37"/>
-        <UsageCount Value="79"/>
+        <UsageCount Value="80"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="pruefungsraum.lfm"/>
         <EditorIndex Value="6"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="79"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit5>
@@ -71,7 +72,7 @@
         <EditorIndex Value="7"/>
         <TopLine Value="6846"/>
         <CursorPos X="27" Y="6914"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="78"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit6>
@@ -80,7 +81,7 @@
         <EditorIndex Value="5"/>
         <TopLine Value="2202"/>
         <CursorPos Y="2174"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="12"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>

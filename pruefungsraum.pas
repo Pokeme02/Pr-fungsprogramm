@@ -55,10 +55,6 @@ type
     SwitchSpicker3: TRadioButton;
     SwitchSpicker4: TRadioButton;
     Delay: TTimer;
-    //procedure Rauscher(Lifepoints: Integer);
-    //procedure Rethschulte(Lifepoints: Integer);
-    //procedure Haak(Lifepoints: Integer);
-    //procedure Schmidt_Goettrup(Lifepoints: Integer);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -124,6 +120,7 @@ implementation
 
 { TForm2 }
 
+//Namesanzeige + Lebenspunkte nach Spickerwechsel
 procedure TForm2.PageControl1Change(Sender: TObject);
 begin
   if PageControl1.TabIndex = SpickerTab1.PageIndex then
@@ -438,7 +435,7 @@ begin
   end;
 end;
 
-
+   // Auslösung der angriffe damage + visuelle wiedergabe
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
@@ -772,7 +769,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = 'Binomische_Formeln' then
+    else if CheckAttack3.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1096,9 +1093,6 @@ begin
 end;
 
 
-
-
-
 procedure TForm2.Button2Click(Sender: TObject);
 begin
 
@@ -1109,7 +1103,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = 'Binomische_Formeln' then
+    else if CheckAttack5.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1269,7 +1263,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = 'Binomische_Formeln' then
+    else if CheckAttack6.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1419,7 +1413,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
-    Memo1.Lines.Add('Spicker setzt ' + CheckAttack4.Caption + ' ein');
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack6.Caption + ' ein');
   end;
     if CheckAttack7.Checked = True then
   begin
@@ -1428,7 +1422,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = 'Binomische_Formeln' then
+    else if CheckAttack7.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1578,7 +1572,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
-    Memo1.Lines.Add('Spicker setzt ' + CheckAttack4.Caption + ' ein');
+    Memo1.Lines.Add('Spicker setzt ' + CheckAttack7.Caption + ' ein');
   end;
 
   if CheckAttack8.Checked = True then
@@ -1588,7 +1582,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = 'Binomische_Formeln' then
+    else if CheckAttack8.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1761,7 +1755,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = 'Binomische_Formeln' then
+    else if CheckAttack9.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1921,7 +1915,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = 'Binomische_Formeln' then
+    else if CheckAttack10.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -2080,7 +2074,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = 'Binomische_Formeln' then
+    else if CheckAttack11.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -2240,7 +2234,7 @@ begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = 'Binomische_Formeln' then
+    else if CheckAttack12.Caption = 'Binomische Formeln' then
     begin
        ProfLifepoints:= ProfLifepoints - 18;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -2403,6 +2397,7 @@ begin
 
 end;
 
+
 procedure TForm2.Button5Click(Sender: TObject);
 begin
   Self.Close;
@@ -2413,6 +2408,7 @@ begin
 
 end;
 
+//Freigabe button
 procedure TForm2.Delay1StartTimer(Sender: TObject);
 begin
   Button2.Enabled:= False;
@@ -2423,6 +2419,27 @@ begin
   end;
 end;
 
+procedure TForm2.Delay2StartTimer(Sender: TObject);
+begin
+  Button3.Enabled:= False;
+  if ProfLifepoints <= 0 then
+  begin
+   Memo1.Lines.Add('DER PROF IST BESIEGT!');
+   Memo1.Lines.Add('DU HAST GEWONNEN!');
+  end;
+end;
+
+procedure TForm2.DelayStartTimer(Sender: TObject);
+begin
+  Button1.Enabled:= False;
+  if ProfLifepoints <= 0 then
+  begin
+   Memo1.Lines.Add('DER PROF IST BESIEGT!');
+   Memo1.Lines.Add('DU HAST GEWONNEN!');
+  end;
+end;
+
+//Gegenangriff Prof + Log
 procedure TForm2.Delay1Timer(Sender: TObject);
 begin
    RandomDamage:= Random(5);
@@ -2477,15 +2494,6 @@ begin
   Button2.Enabled:= True;
 end;
 
-procedure TForm2.Delay2StartTimer(Sender: TObject);
-begin
-  Button3.Enabled:= False;
-  if ProfLifepoints <= 0 then
-  begin
-   Memo1.Lines.Add('DER PROF IST BESIEGT!');
-   Memo1.Lines.Add('DU HAST GEWONNEN!');
-  end;
-end;
 
 procedure TForm2.DelayTimer(Sender: TObject);
 begin
@@ -2600,18 +2608,8 @@ begin
   Button3.Enabled:= True;
 end;
 
-procedure TForm2.DelayStartTimer(Sender: TObject);
-begin
-  Button1.Enabled:= False;
-  if ProfLifepoints <= 0 then
-  begin
-   Memo1.Lines.Add('DER PROF IST BESIEGT!');
-   Memo1.Lines.Add('DU HAST GEWONNEN!');
-  end;
-end;
 
-
-
+//Disable Spicker nach Spickerwechsel
 procedure TForm2.SpickerTab1Enter(Sender: TObject);
 begin
     SpickerTab2.Enabled:= False;

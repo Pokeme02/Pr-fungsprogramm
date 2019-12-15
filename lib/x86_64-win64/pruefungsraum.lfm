@@ -4,8 +4,8 @@ object Form2: TForm2
   Top = 22
   Width = 2950
   Caption = 'Form2'
-  ClientHeight = 1665
-  ClientWidth = 2950
+  ClientHeight = 0
+  ClientWidth = 0
   DesignTimePPI = 192
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
