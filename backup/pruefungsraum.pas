@@ -2573,9 +2573,10 @@ end;
 //Gegenangriff Prof + Log
 procedure TForm2.Delay1Timer(Sender: TObject);
 begin
-   RandomDamage:= Random(5);
+   Randomize;
+   RandomDamage:= Random(4);
 
-  if RandomDamage = 1 then
+  if RandomDamage = 0 then
   begin
    if ProfLifepoints > 0 then
     begin
@@ -2583,14 +2584,14 @@ begin
      Memo1.Lines.Add('Der Professor geht eine Runde');
     end;
   end
-  else if RandomDamage = 2 then
+  else if RandomDamage = 1 then
   begin
    if ProfLifepoints > 0 then
     begin
     Memo1.Lines.Add('Der Professor trinkt Kaffee');
     end;
   end
-  else if RandomDamage = 3 then
+  else if RandomDamage = 2 then
   begin
   if ProfLifepoints > 0 then
     begin
@@ -2598,7 +2599,7 @@ begin
      Memo1.Lines.Add('Der Professor steht hinter dir');
     end;
   end
-  else if RandomDamage = 4 then
+  else if RandomDamage = 3 then
   begin
   if ProfLifepoints > 0 then
     begin
@@ -2606,7 +2607,7 @@ begin
      Memo1.Lines.Add('Der Professor kontrolliert deine Federmappe');
     end;
   end
-  else if RandomDamage = 5 then
+  else if RandomDamage = 4 then
   begin
   if ProfLifepoints > 0 then
     begin
@@ -2689,9 +2690,10 @@ end;
 
 procedure TForm2.Delay2Timer(Sender: TObject);
 begin
-  RandomDamage:= Random(5);
+  Randomize;
+  RandomDamage:= Random(4);
 
-  if RandomDamage = 1 then
+  if RandomDamage = 0 then
   begin
    if ProfLifepoints > 0 then
     begin
@@ -2699,14 +2701,14 @@ begin
      Memo1.Lines.Add('Der Professor geht eine Runde');
     end;
   end
-  else if RandomDamage = 2 then
+  else if RandomDamage = 1 then
   begin
     if ProfLifepoints > 0 then
     begin
     Memo1.Lines.Add('Der Professor trinkt Kaffee');
     end;
   end
-  else if RandomDamage = 3 then
+  else if RandomDamage = 2 then
   begin
    if ProfLifepoints > 0 then
     begin
@@ -2714,7 +2716,7 @@ begin
      Memo1.Lines.Add('Der Professor steht hinter dir');
     end;
   end
-  else if RandomDamage = 4 then
+  else if RandomDamage = 3 then
   begin
    if ProfLifepoints > 0 then
     begin
@@ -2722,7 +2724,7 @@ begin
      Memo1.Lines.Add('Der Professor kontrolliert deine Federmappe');
     end;
   end
-  else if RandomDamage = 5 then
+  else if RandomDamage = 4 then
   begin
    if ProfLifepoints > 0 then
     begin

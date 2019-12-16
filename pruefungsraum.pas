@@ -149,7 +149,7 @@ begin
   // Arrays Mit Namen der Angriffe
   MatheArray[0]:= 'Differentialgleichung';
   MatheArray[1]:= 'Binomische Formeln';
-  MatheArray[2]:= 'PQFormel';
+  MatheArray[2]:= 'PQ-Formel';
   MatheArray[3]:= 'Dreisatz';
   MatheArray[4]:= 'Potenzgesetze';
 
