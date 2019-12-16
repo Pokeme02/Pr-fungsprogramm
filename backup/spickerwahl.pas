@@ -5,7 +5,8 @@ unit Spickerwahl;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Pruefungsraum;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+  Pruefungsraum;
 
 type
 
@@ -18,6 +19,7 @@ type
     GewaehltLabel4: TLabel;
     GewaehltLabel5: TLabel;
     GewaehltLabel6: TLabel;
+    Image1: TImage;
     WeiterzurPruefungButton: TButton;
     MatheSpickerButton1: TButton;
     WISPickerButton2: TButton;
@@ -150,9 +152,11 @@ procedure TForm1.WeiterzurPruefungButtonClick(Sender: TObject);
 begin
   Visible := False; // Makes Form1 invisible
   try
+    Application.CreateForm(TForm2, Form2);
     Form2.ShowModal; // Shows the Form2
   finally
-    Visible := True; // Makes Form1 visible again
+    //Visible := True; // Makes Form1 visible again
+    Self.Close;
   end;
 end;
 
