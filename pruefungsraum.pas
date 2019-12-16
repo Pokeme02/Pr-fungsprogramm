@@ -191,6 +191,7 @@ begin
 
 
   // Random Zahlen für Attackenzuweisung
+  Randomize;
   RandomMath:= Random(3);
   RandomMath2:= Random(2) + 3;
   RandomGWA:=  Random(3);
@@ -403,7 +404,6 @@ begin
   LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
   LabeledEdit2.Text:= IntToStr(ProfLifepoints);
 
-   Delay.Enabled:= True;
    Memo1.Clear;
    Memo1.Lines.Add('Kampf Log');
 
@@ -421,15 +421,27 @@ begin
 
       if Spicker2Lifepoints > 0 then
       begin
+          if SwitchSpicker2.Checked = False then
+          begin
           PageControl1.ActivePage:= SpickerTab2;
           LabeledEdit1.EditLabel.Caption:= SpickerTab2.Caption;
           LabeledEdit1.Text:= IntToStr(Spicker2Lifepoints);
+          end
+          else begin
+             SwitchSpicker2.Checked:= False;
+          end;
       end
       else if Spicker3Lifepoints > 0 then
       begin
+          if SwitchSpicker3.Checked = False then
+          begin
           PageControl1.ActivePage:= SpickerTab3;
           LabeledEdit1.EditLabel.Caption:= SpickerTab3.Caption;
           LabeledEdit1.Text:= IntToStr(Spicker3Lifepoints);
+          end
+          else begin
+               SwitchSpicker3.Checked:= False;
+          end;
       end
       else begin
          Memo1.Font.Height:= 100;
@@ -449,15 +461,27 @@ begin
 
         if Spicker1Lifepoints > 0 then
         begin
+          if SwitchSpicker1.Checked = False then
+          begin
             PageControl1.ActivePage:= SpickerTab1;
             LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
             LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
+          end
+          else begin
+               SwitchSpicker1.Checked:= False;
+          end;
         end
         else if Spicker3Lifepoints > 0 then
         begin
+          if SwitchSpicker3.Checked = False then
+          begin
             PageControl1.ActivePage:= SpickerTab3;
             LabeledEdit1.EditLabel.Caption:= SpickerTab3.Caption;
             LabeledEdit1.Text:= IntToStr(Spicker3Lifepoints);
+          end
+          else begin
+               SwitchSpicker3.Checked:= False;
+          end;
         end
         else begin
          Memo1.Font.Height:= 100;
@@ -476,15 +500,27 @@ begin
 
         if Spicker1Lifepoints > 0 then
         begin
+          if SwitchSpicker1.Checked = False then
+          begin
             PageControl1.ActivePage:= SpickerTab1;
             LabeledEdit1.EditLabel.Caption:= SpickerTab1.Caption;
             LabeledEdit1.Text:= IntToStr(Spicker1Lifepoints);
+          end
+          else begin
+               SwitchSpicker1.Checked:= False;
+          end;
         end
         else if Spicker2Lifepoints > 0 then
         begin
+          if SwitchSpicker2.Checked = False then
+          begin
             PageControl1.ActivePage:= SpickerTab2;
             LabeledEdit1.EditLabel.Caption:= SpickerTab2.Caption;
             LabeledEdit1.Text:= IntToStr(Spicker2Lifepoints);
+          end
+          else begin
+               SwitchSpicker2.Checked:= False;
+          end;
         end
         else begin
          Memo1.Font.Height:= 100;
@@ -2574,9 +2610,10 @@ end;
 
 procedure TForm2.DelayTimer(Sender: TObject);
 begin
-  RandomDamage:= Random(5);
+  Randomize;
+  RandomDamage:= Random(4);
 
-  if RandomDamage = 1 then
+  if RandomDamage = 0 then
   begin
     if ProfLifepoints > 0 then
     begin
@@ -2584,14 +2621,14 @@ begin
      Memo1.Lines.Add('Der Professor geht eine Runde');
     end;
   end
-  else if RandomDamage = 2 then
+  else if RandomDamage = 1 then
   begin
     if ProfLifepoints > 0 then
     begin
     Memo1.Lines.Add('Der Professor trinkt Kaffee');
     end;
   end
-  else if RandomDamage = 3 then
+  else if RandomDamage = 2 then
   begin
        if ProfLifepoints > 0 then
     begin
@@ -2599,7 +2636,7 @@ begin
      Memo1.Lines.Add('Der Professor steht hinter dir');
     end;
   end
-  else if RandomDamage = 4 then
+  else if RandomDamage = 3 then
   begin
     if ProfLifepoints > 0 then
     begin
@@ -2607,7 +2644,7 @@ begin
      Memo1.Lines.Add('Der Professor kontrolliert deine Federmappe');
     end;
   end
-  else if RandomDamage = 5 then
+  else if RandomDamage = 4 then
   begin
    if ProfLifepoints > 0 then
     begin
