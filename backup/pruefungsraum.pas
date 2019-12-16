@@ -99,12 +99,12 @@ var
   RandomBWL2: Integer;
   RandomDamage: Integer;
   IDArray: array[1..3] of integer;
-  MatheArray: array[1..5] of String;
-  GWAArray: array[1..5] of String;
-  WIArray: array[1..5] of String;
-  TIArray: array[1..5] of String;
-  ProgrammierenArray: array[1..5] of String;
-  BWLArray: array[1..5] of String;
+  MatheArray: array[0..4] of String;
+  GWAArray: array[0..4] of String;
+  WIArray: array[0..4] of String;
+  TIArray: array[0..4] of String;
+  ProgrammierenArray: array[0..4] of String;
+  BWLArray: array[0..4] of String;
   OpponentAttackArray: array[1..5] of String;
   ProfLifepoints: integer;
   Spicker1Lifepoints: integer;
@@ -147,41 +147,41 @@ end;
 procedure TForm2.FormCreate(Sender: TObject);
 begin
   // Arrays Mit Namen der Angriffe
-  MatheArray[1]:= 'Differentialgleichung';
-  MatheArray[2]:= 'Binomische Formeln';
-  MatheArray[3]:= 'PQFormel';
-  MatheArray[4]:= 'Dreisatz';
-  MatheArray[5]:= 'Potenzgesetze';
+  MatheArray[0]:= 'Differentialgleichung';
+  MatheArray[1]:= 'Binomische Formeln';
+  MatheArray[2]:= 'PQFormel';
+  MatheArray[3]:= 'Dreisatz';
+  MatheArray[4]:= 'Potenzgesetze';
 
-  GWAArray[1]:= 'Zitierarten';
-  GWAArray[2]:= 'Zeitmanagment';
-  GWAArray[3]:= 'Kommunikation';
-  GWAArray[4]:= 'Lerntechniken';
-  GWAArray[5]:= 'Paesentiertechniken';
+  GWAArray[0]:= 'Zitierarten';
+  GWAArray[1]:= 'Zeitmanagment';
+  GWAArray[2]:= 'Kommunikation';
+  GWAArray[3]:= 'Lerntechniken';
+  GWAArray[4]:= 'Paesentiertechniken';
 
-  WIArray[1]:=  'Datenbanken';
-  WIArray[2]:=  'Neumann Architektur';
-  WIArray[3]:=  'Arithmetische Befehle';
-  WIArray[4]:=  'Rechner Struktur';
-  WIArray[5]:=  'CSP';
+  WIArray[0]:=  'Datenbanken';
+  WIArray[1]:=  'Neumann Architektur';
+  WIArray[2]:=  'Arithmetische Befehle';
+  WIArray[3]:=  'Rechner Struktur';
+  WIArray[4]:=  'CSP';
 
-  TIArray[1]:=  'Boolesche Funktionen';
-  TIArray[2]:=  'KV Diagramme';
-  TIArray[3]:=  'URI';
-  TIArray[4]:=  'ASCII';
-  TIArray[5]:=  'Zweier Komplement';
+  TIArray[0]:=  'Boolesche Funktionen';
+  TIArray[1]:=  'KV Diagramme';
+  TIArray[2]:=  'URI';
+  TIArray[3]:=  'ASCII';
+  TIArray[4]:=  'Zweier Komplement';
 
-  ProgrammierenArray[1]:= 'ForSchleife';
-  ProgrammierenArray[2]:= 'While Schleife';
-  ProgrammierenArray[3]:= 'Zuweisungsstatements';
-  ProgrammierenArray[4]:= 'GUI';
-  ProgrammierenArray[5]:= 'Semikolon';
+  ProgrammierenArray[0]:= 'ForSchleife';
+  ProgrammierenArray[1]:= 'While Schleife';
+  ProgrammierenArray[2]:= 'Zuweisungsstatements';
+  ProgrammierenArray[3]:= 'GUI';
+  ProgrammierenArray[4]:= 'Semikolon';
 
-  BWLArray[1]:= 'ABC Analyse';
-  BWLArray[2]:= 'Lagerhaltung';
-  BWLArray[3]:= 'EVA Prinzip';
-  BWLArray[4]:= 'Prozessmamagement';
-  BWLArray[5]:= 'Produktionsfaktoren';
+  BWLArray[0]:= 'ABC Analyse';
+  BWLArray[1]:= 'Lagerhaltung';
+  BWLArray[2]:= 'EVA Prinzip';
+  BWLArray[3]:= 'Prozessmamagement';
+  BWLArray[4]:= 'Produktionsfaktoren';
 
   OpponentAttackArray[1]:= 'Geht eine Runde';
   OpponentAttackArray[2]:= 'Kaffee trinken';
@@ -191,24 +191,26 @@ begin
 
 
   // Random Zahlen für Attackenzuweisung
-  RandomMath:= Random(3);
-  RandomMath2:= Random(2) + 3;
-  RandomGWA:=  Random(3);
-  RandomGWA2:=  Random(2)+3;
-  RandomWI:= Random(3);
-  RandomWI2:= Random(2) + 3;
-  RandomTI:= Random(3);
-  RandomTI2:= Random(2) +3;
-  RandomProgrammieren:= Random(3);
-  RandomProgrammieren2:= Random(2) +3;
-  RandomBWL:= Random(3);
-  RandomBWL2:= Random(2) + 3;
+  Randomize;
+  RandomMath:= Random(2);
+  RandomMath2:= Random(1) + 2;
+  RandomGWA:=  Random(2);
+  RandomGWA2:=  Random(1)+2;
+  RandomWI:= Random(2);
+  RandomWI2:= Random(1) + 2;
+  RandomTI:= Random(2);
+  RandomTI2:= Random(1) +2;
+  RandomProgrammieren:= Random(2);
+  RandomProgrammieren2:= Random(1) +2;
+  RandomBWL:= Random(2);
+  RandomBWL2:= Random(1) + 2;
 
   //Zuweisung der Tabnamen durch ID's
   if IDArray[1] = 1 then
     begin
         SpickerTab1.Caption := 'Mathe';
-        Random5:=    Random(5);
+        Randomize;
+        Random5:=    Random(4);
 
         CheckAttack1.Caption:= MatheArray[RandomMath];
         CheckAttack2.Caption:= MatheArray[RandomMath2];
@@ -218,7 +220,8 @@ begin
   else if IDArray[1] = 2 then
     begin
         SpickerTab1.Caption := 'WI';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack1.Caption:= WIArray[RandomWI];
         CheckAttack2.Caption:= WIArray[RandomWI2];
@@ -228,7 +231,8 @@ begin
   else if IDArray[1] = 3 then
     begin
         SpickerTab1.Caption := 'GWA';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack1.Caption:= GWAArray[RandomGWA];
         CheckAttack2.Caption:= GWAArray[RandomGWA2];
@@ -238,7 +242,8 @@ begin
   else if IDArray[1] = 4 then
     begin
         SpickerTab1.Caption := 'BWL';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack1.Caption:= BWLArray[RandomBWL];
         CheckAttack2.Caption:= BWLArray[RandomBWL2];
@@ -248,7 +253,8 @@ begin
   else if IDArray[1] = 5 then
     begin
         SpickerTab1.Caption := 'Programmieren';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack1.Caption:= ProgrammierenArray[RandomProgrammieren];
         CheckAttack2.Caption:= ProgrammierenArray[RandomProgrammieren2];
@@ -258,7 +264,8 @@ begin
   else if IDArray[1] = 6 then
     begin
         SpickerTab1.Caption := 'TI';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack1.Caption:= TIArray[RandomTI];
         CheckAttack2.Caption:= TIArray[RandomTI2];
@@ -269,7 +276,8 @@ begin
   if IDArray[2] = 1 then
     begin
         SpickerTab2.Caption := 'Mathe';
-        Random5:=    Random(5);
+        Randomize;
+        Random5:=    Random(4);
 
         CheckAttack5.Caption:= MatheArray[RandomMath];
         CheckAttack6.Caption:= MatheArray[RandomMath2];
@@ -279,7 +287,8 @@ begin
   else if IDArray[2] = 2 then
     begin
         SpickerTab2.Caption := 'WI';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack5.Caption:= WIArray[RandomWI];
         CheckAttack6.Caption:= WIArray[RandomWI2];
@@ -289,7 +298,8 @@ begin
   else if IDArray[2] = 3 then
     begin
         SpickerTab2.Caption := 'GWA';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack5.Caption:= GWAArray[RandomGWA];
         CheckAttack6.Caption:= GWAArray[RandomGWA2];
@@ -299,7 +309,8 @@ begin
   else if IDArray[2] = 4 then
     begin
         SpickerTab2.Caption := 'BWL';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack5.Caption:= BWLArray[RandomBWL];
         CheckAttack6.Caption:= BWLArray[RandomBWL2];
@@ -309,7 +320,8 @@ begin
   else if IDArray[2] = 5 then
     begin
         SpickerTab2.Caption := 'Programmieren';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack5.Caption:= ProgrammierenArray[RandomProgrammieren];
         CheckAttack6.Caption:= ProgrammierenArray[RandomProgrammieren2];
@@ -319,7 +331,8 @@ begin
   else if IDArray[2] = 6 then
     begin
         SpickerTab2.Caption := 'TI';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack5.Caption:= TIArray[RandomTI];
         CheckAttack6.Caption:= TIArray[RandomTI2];
@@ -330,7 +343,8 @@ begin
   if IDArray[3] = 1 then
     begin
         SpickerTab3.Caption := 'Mathe';
-        Random5:=    Random(5);
+        Randomize;
+        Random5:=    Random(4);
 
         CheckAttack9.Caption:= MatheArray[RandomMath];
         CheckAttack10.Caption:= MatheArray[RandomMath2];
@@ -340,7 +354,8 @@ begin
   else if IDArray[3] = 2 then
     begin
         SpickerTab3.Caption := 'WI';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack9.Caption:= WIArray[RandomWI];
         CheckAttack10.Caption:= WIArray[RandomWI2];
@@ -350,7 +365,8 @@ begin
   else if IDArray[3] = 3 then
     begin
         SpickerTab3.Caption := 'GWA';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack9.Caption:= GWAArray[RandomGWA];
         CheckAttack10.Caption:= GWAArray[RandomGWA2];
@@ -360,7 +376,8 @@ begin
   else if IDArray[3] = 4 then
     begin
         SpickerTab3.Caption := 'BWL';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack9.Caption:= BWLArray[RandomBWL];
         CheckAttack10.Caption:= BWLArray[RandomBWL2];
@@ -370,7 +387,8 @@ begin
   else if IDArray[3] = 5 then
     begin
         SpickerTab3.Caption := 'Programmieren';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack9.Caption:= ProgrammierenArray[RandomProgrammieren];
         CheckAttack10.Caption:= ProgrammierenArray[RandomProgrammieren2];
@@ -380,7 +398,8 @@ begin
   else if IDArray[3] = 6 then
     begin
         SpickerTab3.Caption := 'TI';
-        Random5:= Random(5);
+        Randomize;
+        Random5:= Random(4);
 
         CheckAttack9.Caption:= TIArray[RandomTI];
         CheckAttack10.Caption:= TIArray[RandomTI2];
@@ -581,131 +600,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack1.Caption = GWAArray[1] then
+    if CheckAttack1.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack1.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack1.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack1.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = GWAArray[5] then
+    else if CheckAttack1.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack1.Caption = WIArray[1] then
+    if CheckAttack1.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = WIArray[2] then
+    else if CheckAttack1.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = WIArray[3] then
+    else if CheckAttack1.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack1.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack1.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack1.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack1.Caption = TIArray[1] then
+    if CheckAttack1.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = TIArray[2] then
+    else if CheckAttack1.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = TIArray[3] then
+    else if CheckAttack1.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = TIArray[4] then
+    else if CheckAttack1.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = TIArray[5] then
+    else if CheckAttack1.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack1.Caption = ProgrammierenArray[1] then
+    if CheckAttack1.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = ProgrammierenArray[2] then
+    else if CheckAttack1.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = ProgrammierenArray[3] then
+    else if CheckAttack1.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = ProgrammierenArray[4] then
+    else if CheckAttack1.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = ProgrammierenArray[5] then
+    else if CheckAttack1.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack1.Caption = BWLArray[1] then
+    if CheckAttack1.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = BWLArray[2] then
+    else if CheckAttack1.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = BWLArray[3] then
+    else if CheckAttack1.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = BWLArray[4] then
+    else if CheckAttack1.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack1.Caption = BWLArray[5] then
+    else if CheckAttack1.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -741,131 +760,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack2.Caption = GWAArray[1] then
+    if CheckAttack2.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack2.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack2.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack2.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = GWAArray[5] then
+    else if CheckAttack2.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack2.Caption = WIArray[1] then
+    if CheckAttack2.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = WIArray[2] then
+    else if CheckAttack2.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = WIArray[3] then
+    else if CheckAttack2.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack2.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack2.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack2.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack2.Caption = TIArray[1] then
+    if CheckAttack2.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = TIArray[2] then
+    else if CheckAttack2.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = TIArray[3] then
+    else if CheckAttack2.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = TIArray[4] then
+    else if CheckAttack2.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = TIArray[5] then
+    else if CheckAttack2.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack2.Caption = ProgrammierenArray[1] then
+    if CheckAttack2.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = ProgrammierenArray[2] then
+    else if CheckAttack2.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = ProgrammierenArray[3] then
+    else if CheckAttack2.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = ProgrammierenArray[4] then
+    else if CheckAttack2.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = ProgrammierenArray[5] then
+    else if CheckAttack2.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack2.Caption = BWLArray[1] then
+    if CheckAttack2.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = BWLArray[2] then
+    else if CheckAttack2.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = BWLArray[3] then
+    else if CheckAttack2.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = BWLArray[4] then
+    else if CheckAttack2.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack2.Caption = BWLArray[5] then
+    else if CheckAttack2.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -902,131 +921,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack3.Caption = GWAArray[1] then
+    if CheckAttack3.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack3.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack3.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack3.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack3.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = GWAArray[5] then
+    else if CheckAttack3.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack3.Caption = WIArray[1] then
+    if CheckAttack3.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = WIArray[2] then
+    else if CheckAttack3.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = WIArray[3] then
+    else if CheckAttack3.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack3.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack3.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack3.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack3.Caption = TIArray[1] then
+    if CheckAttack3.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = TIArray[2] then
+    else if CheckAttack3.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = TIArray[3] then
+    else if CheckAttack3.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = TIArray[4] then
+    else if CheckAttack3.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = TIArray[5] then
+    else if CheckAttack3.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack3.Caption = ProgrammierenArray[1] then
+    if CheckAttack3.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = ProgrammierenArray[2] then
+    else if CheckAttack3.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = ProgrammierenArray[3] then
+    else if CheckAttack3.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = ProgrammierenArray[4] then
+    else if CheckAttack3.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = ProgrammierenArray[5] then
+    else if CheckAttack3.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack3.Caption = BWLArray[1] then
+    if CheckAttack3.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = BWLArray[2] then
+    else if CheckAttack3.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = BWLArray[3] then
+    else if CheckAttack3.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = BWLArray[4] then
+    else if CheckAttack3.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack3.Caption = BWLArray[5] then
+    else if CheckAttack3.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1062,131 +1081,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack4.Caption = GWAArray[1] then
+    if CheckAttack4.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack4.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack4.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack4.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack4.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = GWAArray[5] then
+    else if CheckAttack4.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack4.Caption = WIArray[1] then
+    if CheckAttack4.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = WIArray[2] then
+    else if CheckAttack4.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = WIArray[3] then
+    else if CheckAttack4.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack4.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack4.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack4.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack4.Caption = TIArray[1] then
+    if CheckAttack4.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = TIArray[2] then
+    else if CheckAttack4.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = TIArray[3] then
+    else if CheckAttack4.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = TIArray[4] then
+    else if CheckAttack4.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = TIArray[5] then
+    else if CheckAttack4.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack4.Caption = ProgrammierenArray[1] then
+    if CheckAttack4.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = ProgrammierenArray[2] then
+    else if CheckAttack4.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = ProgrammierenArray[3] then
+    else if CheckAttack4.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = ProgrammierenArray[4] then
+    else if CheckAttack4.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = ProgrammierenArray[5] then
+    else if CheckAttack4.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack4.Caption = BWLArray[1] then
+    if CheckAttack4.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = BWLArray[2] then
+    else if CheckAttack4.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = BWLArray[3] then
+    else if CheckAttack4.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = BWLArray[4] then
+    else if CheckAttack4.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack4.Caption = BWLArray[5] then
+    else if CheckAttack4.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1236,131 +1255,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack5.Caption = GWAArray[1] then
+    if CheckAttack5.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack5.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack5.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack5.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack5.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = GWAArray[5] then
+    else if CheckAttack5.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack5.Caption = WIArray[1] then
+    if CheckAttack5.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = WIArray[2] then
+    else if CheckAttack5.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = WIArray[3] then
+    else if CheckAttack5.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack5.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack5.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack5.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack5.Caption = TIArray[1] then
+    if CheckAttack5.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = TIArray[2] then
+    else if CheckAttack5.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = TIArray[3] then
+    else if CheckAttack5.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = TIArray[4] then
+    else if CheckAttack5.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = TIArray[5] then
+    else if CheckAttack5.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack5.Caption = ProgrammierenArray[1] then
+    if CheckAttack5.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = ProgrammierenArray[2] then
+    else if CheckAttack5.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = ProgrammierenArray[3] then
+    else if CheckAttack5.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = ProgrammierenArray[4] then
+    else if CheckAttack5.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = ProgrammierenArray[5] then
+    else if CheckAttack5.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack5.Caption = BWLArray[1] then
+    if CheckAttack5.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = BWLArray[2] then
+    else if CheckAttack5.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = BWLArray[3] then
+    else if CheckAttack5.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = BWLArray[4] then
+    else if CheckAttack5.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack5.Caption = BWLArray[5] then
+    else if CheckAttack5.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1396,131 +1415,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack6.Caption = GWAArray[1] then
+    if CheckAttack6.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack6.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack6.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack6.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack6.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = GWAArray[5] then
+    else if CheckAttack6.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack6.Caption = WIArray[1] then
+    if CheckAttack6.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = WIArray[2] then
+    else if CheckAttack6.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = WIArray[3] then
+    else if CheckAttack6.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack6.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack6.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack6.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack6.Caption = TIArray[1] then
+    if CheckAttack6.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = TIArray[2] then
+    else if CheckAttack6.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = TIArray[3] then
+    else if CheckAttack6.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = TIArray[4] then
+    else if CheckAttack6.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = TIArray[5] then
+    else if CheckAttack6.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack6.Caption = ProgrammierenArray[1] then
+    if CheckAttack6.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = ProgrammierenArray[2] then
+    else if CheckAttack6.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = ProgrammierenArray[3] then
+    else if CheckAttack6.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = ProgrammierenArray[4] then
+    else if CheckAttack6.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = ProgrammierenArray[5] then
+    else if CheckAttack6.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack6.Caption = BWLArray[1] then
+    if CheckAttack6.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = BWLArray[2] then
+    else if CheckAttack6.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = BWLArray[3] then
+    else if CheckAttack6.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = BWLArray[4] then
+    else if CheckAttack6.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack6.Caption = BWLArray[5] then
+    else if CheckAttack6.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1555,131 +1574,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack7.Caption = GWAArray[1] then
+    if CheckAttack7.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack7.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack7.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack7.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack7.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = GWAArray[5] then
+    else if CheckAttack7.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack7.Caption = WIArray[1] then
+    if CheckAttack7.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = WIArray[2] then
+    else if CheckAttack7.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = WIArray[3] then
+    else if CheckAttack7.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack7.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack7.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack7.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack7.Caption = TIArray[1] then
+    if CheckAttack7.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = TIArray[2] then
+    else if CheckAttack7.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = TIArray[3] then
+    else if CheckAttack7.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = TIArray[4] then
+    else if CheckAttack7.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = TIArray[5] then
+    else if CheckAttack7.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack7.Caption = ProgrammierenArray[1] then
+    if CheckAttack7.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = ProgrammierenArray[2] then
+    else if CheckAttack7.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = ProgrammierenArray[3] then
+    else if CheckAttack7.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = ProgrammierenArray[4] then
+    else if CheckAttack7.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = ProgrammierenArray[5] then
+    else if CheckAttack7.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack7.Caption = BWLArray[1] then
+    if CheckAttack7.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = BWLArray[2] then
+    else if CheckAttack7.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = BWLArray[3] then
+    else if CheckAttack7.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = BWLArray[4] then
+    else if CheckAttack7.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack7.Caption = BWLArray[5] then
+    else if CheckAttack7.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1715,131 +1734,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack8.Caption = GWAArray[1] then
+    if CheckAttack8.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack8.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack8.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack8.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack8.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = GWAArray[5] then
+    else if CheckAttack8.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack8.Caption = WIArray[1] then
+    if CheckAttack8.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = WIArray[2] then
+    else if CheckAttack8.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = WIArray[3] then
+    else if CheckAttack8.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack8.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack8.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack8.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack8.Caption = TIArray[1] then
+    if CheckAttack8.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = TIArray[2] then
+    else if CheckAttack8.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = TIArray[3] then
+    else if CheckAttack8.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = TIArray[4] then
+    else if CheckAttack8.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = TIArray[5] then
+    else if CheckAttack8.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack8.Caption = ProgrammierenArray[1] then
+    if CheckAttack8.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = ProgrammierenArray[2] then
+    else if CheckAttack8.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = ProgrammierenArray[3] then
+    else if CheckAttack8.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = ProgrammierenArray[4] then
+    else if CheckAttack8.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = ProgrammierenArray[5] then
+    else if CheckAttack8.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack8.Caption = BWLArray[1] then
+    if CheckAttack8.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = BWLArray[2] then
+    else if CheckAttack8.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = BWLArray[3] then
+    else if CheckAttack8.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = BWLArray[4] then
+    else if CheckAttack8.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack8.Caption = BWLArray[5] then
+    else if CheckAttack8.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -1888,131 +1907,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack9.Caption = GWAArray[1] then
+    if CheckAttack9.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack9.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack9.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack9.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack9.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = GWAArray[5] then
+    else if CheckAttack9.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack9.Caption = WIArray[1] then
+    if CheckAttack9.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = WIArray[2] then
+    else if CheckAttack9.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = WIArray[3] then
+    else if CheckAttack9.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack9.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack9.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack9.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack9.Caption = TIArray[1] then
+    if CheckAttack9.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = TIArray[2] then
+    else if CheckAttack9.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = TIArray[3] then
+    else if CheckAttack9.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = TIArray[4] then
+    else if CheckAttack9.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = TIArray[5] then
+    else if CheckAttack9.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack9.Caption = ProgrammierenArray[1] then
+    if CheckAttack9.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = ProgrammierenArray[2] then
+    else if CheckAttack9.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = ProgrammierenArray[3] then
+    else if CheckAttack9.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = ProgrammierenArray[4] then
+    else if CheckAttack9.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = ProgrammierenArray[5] then
+    else if CheckAttack9.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack9.Caption = BWLArray[1] then
+    if CheckAttack9.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = BWLArray[2] then
+    else if CheckAttack9.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = BWLArray[3] then
+    else if CheckAttack9.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = BWLArray[4] then
+    else if CheckAttack9.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack9.Caption = BWLArray[5] then
+    else if CheckAttack9.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -2048,131 +2067,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack10.Caption = GWAArray[1] then
+    if CheckAttack10.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack10.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack10.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack10.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack10.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = GWAArray[5] then
+    else if CheckAttack10.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack8.Caption = WIArray[1] then
+    if CheckAttack8.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = WIArray[2] then
+    else if CheckAttack10.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = WIArray[3] then
+    else if CheckAttack10.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack10.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack10.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack10.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack10.Caption = TIArray[1] then
+    if CheckAttack10.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = TIArray[2] then
+    else if CheckAttack10.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = TIArray[3] then
+    else if CheckAttack10.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = TIArray[4] then
+    else if CheckAttack10.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = TIArray[5] then
+    else if CheckAttack10.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack10.Caption = ProgrammierenArray[1] then
+    if CheckAttack10.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = ProgrammierenArray[2] then
+    else if CheckAttack10.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = ProgrammierenArray[3] then
+    else if CheckAttack10.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = ProgrammierenArray[4] then
+    else if CheckAttack10.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = ProgrammierenArray[5] then
+    else if CheckAttack10.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack10.Caption = BWLArray[1] then
+    if CheckAttack10.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = BWLArray[2] then
+    else if CheckAttack10.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = BWLArray[3] then
+    else if CheckAttack10.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = BWLArray[4] then
+    else if CheckAttack10.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack10.Caption = BWLArray[5] then
+    else if CheckAttack10.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -2207,131 +2226,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack11.Caption = GWAArray[1] then
+    if CheckAttack11.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack11.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack11.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack11.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack11.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = GWAArray[5] then
+    else if CheckAttack11.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack11.Caption = WIArray[1] then
+    if CheckAttack11.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = WIArray[2] then
+    else if CheckAttack11.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = WIArray[3] then
+    else if CheckAttack11.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack11.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack11.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack11.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack11.Caption = TIArray[1] then
+    if CheckAttack11.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = TIArray[2] then
+    else if CheckAttack11.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = TIArray[3] then
+    else if CheckAttack11.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = TIArray[4] then
+    else if CheckAttack11.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = TIArray[5] then
+    else if CheckAttack11.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack11.Caption = ProgrammierenArray[1] then
+    if CheckAttack11.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = ProgrammierenArray[2] then
+    else if CheckAttack11.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = ProgrammierenArray[3] then
+    else if CheckAttack11.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = ProgrammierenArray[4] then
+    else if CheckAttack11.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = ProgrammierenArray[5] then
+    else if CheckAttack11.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack11.Caption = BWLArray[1] then
+    if CheckAttack11.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = BWLArray[2] then
+    else if CheckAttack11.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = BWLArray[3] then
+    else if CheckAttack11.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = BWLArray[4] then
+    else if CheckAttack11.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack11.Caption = BWLArray[5] then
+    else if CheckAttack11.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
@@ -2367,131 +2386,131 @@ begin
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack12.Caption = GWAArray[1] then
+    if CheckAttack12.Caption = GWAArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack12.Caption = GWAArray[1] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack12.Caption = GWAArray[2] then
     begin
-       ProfLifepoints:= ProfLifepoints - 15;
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack12.Caption = GWAArray[3] then
     begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack12.Caption = GWAArray[4] then
-    begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = GWAArray[5] then
+    else if CheckAttack12.Caption = GWAArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack12.Caption = WIArray[1] then
+    if CheckAttack12.Caption = WIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = WIArray[2] then
+    else if CheckAttack12.Caption = WIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = WIArray[3] then
+    else if CheckAttack12.Caption = WIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
+       LabeledEdit2.Text := IntToStr(ProfLifepoints);
+    end
+    else if CheckAttack12.Caption = WIArray[3] then
+    begin
+       ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
     else if CheckAttack12.Caption = WIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
-    end
-    else if CheckAttack12.Caption = WIArray[5] then
-    begin
-       ProfLifepoints:= ProfLifepoints - 10;
-       LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack12.Caption = TIArray[1] then
+    if CheckAttack12.Caption = TIArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = TIArray[2] then
+    else if CheckAttack12.Caption = TIArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = TIArray[3] then
+    else if CheckAttack12.Caption = TIArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = TIArray[4] then
+    else if CheckAttack12.Caption = TIArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = TIArray[5] then
+    else if CheckAttack12.Caption = TIArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack12.Caption = ProgrammierenArray[1] then
+    if CheckAttack12.Caption = ProgrammierenArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = ProgrammierenArray[2] then
+    else if CheckAttack12.Caption = ProgrammierenArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = ProgrammierenArray[3] then
+    else if CheckAttack12.Caption = ProgrammierenArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 12;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = ProgrammierenArray[4] then
+    else if CheckAttack12.Caption = ProgrammierenArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = ProgrammierenArray[5] then
+    else if CheckAttack12.Caption = ProgrammierenArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 25;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end;
 
-    if CheckAttack12.Caption = BWLArray[1] then
+    if CheckAttack12.Caption = BWLArray[0] then
     begin
        ProfLifepoints:= ProfLifepoints - 5;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = BWLArray[2] then
+    else if CheckAttack12.Caption = BWLArray[1] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text:= IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = BWLArray[3] then
+    else if CheckAttack12.Caption = BWLArray[2] then
     begin
        ProfLifepoints:= ProfLifepoints - 10;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = BWLArray[4] then
+    else if CheckAttack12.Caption = BWLArray[3] then
     begin
        ProfLifepoints:= ProfLifepoints - 15;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
     end
-    else if CheckAttack12.Caption = BWLArray[5] then
+    else if CheckAttack12.Caption = BWLArray[4] then
     begin
        ProfLifepoints:= ProfLifepoints - 20;
        LabeledEdit2.Text := IntToStr(ProfLifepoints);
